@@ -19,7 +19,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.125.0'  # 可按需要改为你本地使用的版本
+          hugo-version: '0.147.8'  # 可按需要改为你本地使用的版本
 
       - name: Build site
         run: hugo --minify

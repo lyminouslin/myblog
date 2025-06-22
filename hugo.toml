@@ -35,6 +35,7 @@ hasCJKLanguage = true
   math = true
   showWordCount = true
   showRssButtonInSectionTermList = true
+  googleAnalytics = ""
   useHugoToc = true
   showtoc = true
   tocopen = false
