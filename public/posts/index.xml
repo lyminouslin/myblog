@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Kevin Y. Lin&#39;s Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Kevin Y. Lin&#39;s Blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Jun 2025 00:41:15 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Munkres Manifolds Derivations</title>
+      <link>http://localhost:1313/posts/munkres-manifolds-derivations/</link>
+      <pubDate>Sun, 22 Jun 2025 00:41:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/munkres-manifolds-derivations/</guid>
+      <description>&lt;p&gt;Let \( M \) be a topological space. Following Munkres, we define \( M \) to be a \( k \)-dimensional manifold &lt;strong&gt;without boundary&lt;/strong&gt; if:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;\( M \) is Hausdorff,&lt;/li&gt;
+&lt;li&gt;\( M \) is second-countable,&lt;/li&gt;
+&lt;li&gt;For every \( p \in M \), there exists an open neighborhood \( U \subset M \) and a homeomorphism:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\varphi : U \to V \subset \mathbb{{R}}^k
+$$&lt;/p&gt;
+&lt;p&gt;where \( V \) is open in \( \mathbb{{R}}^k \).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

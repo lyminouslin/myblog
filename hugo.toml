@@ -1,0 +1,126 @@
+baseURL = "https://kevinylin.org/"
+title = "Kevin Y. Lin's Blog"
+theme = "PaperMod"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 5
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.110.0"
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  title = "Kevin Y. Lin"
+  description = "Topological condensed matter physics and NLP"
+  keywords = ["Physics", "NLP", "Kevin Y. Lin"]
+  author = "Kevin Y. Lin"
+  defaultTheme = "auto"
+  showReadingTime = true
+  ShowHomeInfo = true
+  showShareButtons = true
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = true
+  math = true
+  showWordCount = true
+  showRssButtonInSectionTermList = true
+  useHugoToc = true
+  showtoc = true
+  tocopen = false
+  env = "production"
+  DateFormat = "2006-01-02"
+  mainSections = ["posts"]
+
+  [params.profileMode]
+    enabled = false
+    title = "Kevin Y. Lin"
+    subtitle = "Undergraduate in Physics @ SUSTech, Class of 2028"
+    imageUrl = "images/kevin.jpg"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Kevin Y. Lin"
+
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "posts"
+
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "tags"
+
+  [params.homeInfoParams]
+    title = "Welcome 👋"
+    content = """
+I am **Kevin Y. Lin**, a candidate for the **Bachelor of Science (B.S.) in Physics**,  
+Class of 2028 at the **Southern University of Science and Technology (SUSTech)**.  
+  
+My primary research interest lies in **topological condensed matter physics**, particularly in  
+emergent quantum phenomena and novel phases of matter.  
+I'm also passionate about **natural language processing (NLP)** and its implications for AI.  
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/lyminouslin"
+
+  [[params.socialIcons]]
+    name = "x"
+    url = "https://x.com/crypto_lunaii"
+
+  [[params.socialIcons]]
+    name = "mathstack"
+    url = "https://math.stackexchange.com/users/1642272/kevin-lin"
+
+# 可选评论系统（启用前取消注释）
+# [params.comments]
+#   provider = "disqus"
+#   disqusShortname = "your-disqus-shortname"
+
+# [params.comments]
+#   provider = "giscus"
+#   repo = "lyminouslin/your-repo"
+#   repoID = "your-repo-id"
+#   category = "General"
+#   categoryID = "your-category-id"
+#   mapping = "pathname"
+#   reactionsEnabled = "1"
+#   emitMetadata = "0"
+#   inputPosition = "bottom"
+#   theme = "preferred_color_scheme"
+#   lang = "en"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "Kevin Y. Lin's Blog"
+    contentDir = "content/en"
+
+  [languages.zh]
+    languageName = "中文"
+    weight = 2
+    title = "Kevin Y. Lin 的博客"
+    contentDir = "content/zh"
+
+    [languages.zh.params.profileMode]
+      enabled = true
+      title = "林凯文 Kevin"
+      subtitle = "南方科技大学物理系本科生（2028届）"
+
+    [languages.zh.params.homeInfoParams]
+      title = "你好，欢迎 👋"
+      content = """
+我是**林凯文 (Kevin Y. Lin)**，就读于**南方科技大学 (SUSTech)**，  
+攻读**物理学学士学位**，预计毕业于2028年。  
+"""
