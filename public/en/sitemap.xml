@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/munkres-manifolds-derivations/</loc>
+    <loc>https://kevinylin.org/en/posts/munkres-manifolds-derivations/</loc>
     <lastmod>2025-06-22T00:41:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://kevinylin.org/en/posts/</loc>
     <lastmod>2025-06-22T00:41:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://kevinylin.org/en/</loc>
     <lastmod>2025-06-22T00:41:15+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/"
+                href="https://kevinylin.org/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://kevinylin.org/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://kevinylin.org/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/categories/"
+                href="https://kevinylin.org/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="https://kevinylin.org/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://kevinylin.org/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
+                href="https://kevinylin.org/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="https://kevinylin.org/en/tags/"
                 />
   </url>
 </urlset>
