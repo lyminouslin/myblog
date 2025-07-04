@@ -46,6 +46,7 @@ enableRobotsTXT = true
   showPostNavLinks = true
   showBreadCrumbs = true
   showCodeCopyButtons = true
+  math = true
   showWordCount = true
   showRssButtonInSectionTermList = true
   useHugoToc = true
@@ -75,12 +76,16 @@ enableRobotsTXT = true
   [params.homeInfoParams]
     title = "Welcome 👋"
     content = """
-I am **Kevin Y. Lin**, a candidate for the **Bachelor of Science (B.S.) in Physics**,  
-Class of 2028 at the **Southern University of Science and Technology (SUSTech)**.  
+I am **Kevin Y. Lin**, a **B.S. candidate in Physics** at the **Southern University of Science and Technology (SUSTech)**, Class of 2028.
 
-My primary research interest lies in **topological condensed matter physics**, particularly in  
-emergent quantum phenomena and novel phases of matter.  
-I'm also passionate about **natural language processing (NLP)** and its implications for AI.
+My primary academic focus is in **experimental condensed matter physics**, particularly the study of **quantum materials** using techniques such as **scanning tunneling microscopy (STM)** and **angle-resolved photoemission spectroscopy (ARPES)**.
+
+I am especially interested in the **electronic structure of quantum materials at the atomic scale**, where subtle variations in local symmetry, orbital composition, or lattice distortion can give rise to rich and often unexpected emergent phenomena. Understanding these behaviors not only deepens our knowledge of quantum matter, but also opens up possibilities for discovering new phases with exotic properties such as **topological order**, **unconventional superconductivity**, or **strongly correlated states**.
+
+I am currently conducting research under the supervision of [**Prof. Jiaxin Yin**](https://www.sustech.edu.cn/en/faculties/yinjiaxin.html) at SUSTech, focusing on **novel quantum phases and topological materials**.
+
+Beyond my major, I have a strong personal interest in **statistics**, especially in **Bayesian inference**, **probabilistic modeling**, and the **mathematical foundations of statistical reasoning**. While not part of my formal curriculum, I find deep intellectual satisfaction in exploring how uncertainty, information, and inference are rigorously understood.
+``
 """
 
   [[params.socialIcons]]
