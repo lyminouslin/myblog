@@ -1,0 +1,8 @@
+# 从根目录开始
+hugo --cleanDestinationDir --gc --minify
+
+cd public
+git add .
+git commit -m Redeploy clean build
+git push -f origin mastergh-pages
+cd ..
