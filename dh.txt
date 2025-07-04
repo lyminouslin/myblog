@@ -1,8 +1,16 @@
-# 从根目录开始
-hugo --cleanDestinationDir --gc --minify
-
-cd public
 git add .
-git commit -m Redeploy clean build
-git push -f origin mastergh-pages
-cd ..
+git commit -m "new post"
+git push -u origin main
+（提交指令合集）
+
+hugo server不显示草稿
+hugo进行构建
+hugo server --disableFastRender -D显示草稿
+hugo new posts/my-first-post.md写新文章，中间的-表示空格，如果要加入katex就这么写前缀
++++
+date = '2025-06-22T00:41:15+08:00'
+draft = false
+title = 'Munkres Manifolds Derivations'
+math = true
+katex = true
++++

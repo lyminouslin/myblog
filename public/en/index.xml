@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Welcome on Kevin Y. Lin&#39;s Blog</title>
-    <link>http://localhost:1313/en/</link>
+    <link>https://kevinylin.org/en/</link>
     <description>Recent content in Welcome on Kevin Y. Lin&#39;s Blog</description>
     <generator>Hugo -- 0.147.8</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Jun 2025 00:41:15 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jul 2025 21:39:14 +0800</lastBuildDate>
+    <atom:link href="https://kevinylin.org/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://kevinylin.org/en/posts/my-first-post/</link>
+      <pubDate>Fri, 04 Jul 2025 21:39:14 +0800</pubDate>
+      <guid>https://kevinylin.org/en/posts/my-first-post/</guid>
+      <description>&lt;p&gt;fkughjgjjjjjj&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Munkres Manifolds Derivations</title>
-      <link>http://localhost:1313/en/posts/munkres-manifolds-derivations/</link>
+      <link>https://kevinylin.org/en/posts/munkres-manifolds-derivations/</link>
       <pubDate>Sun, 22 Jun 2025 00:41:15 +0800</pubDate>
-      <guid>http://localhost:1313/en/posts/munkres-manifolds-derivations/</guid>
+      <guid>https://kevinylin.org/en/posts/munkres-manifolds-derivations/</guid>
       <description>&lt;p&gt;Let \( M \) be a topological space. Following Munkres, we define \( M \) to be a \( k \)-dimensional manifold &lt;strong&gt;without boundary&lt;/strong&gt; if:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;\( M \) is Hausdorff,&lt;/li&gt;
