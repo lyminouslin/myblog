@@ -14,3 +14,5 @@ title = 'Munkres Manifolds Derivations'
 math = true
 katex = true
 +++
+
+trigger空提交：git commit --allow-empty -m "chore: trigger redeploy"
