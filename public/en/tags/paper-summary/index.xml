@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Paper Summary on Kevin Y. Lin&#39;s Blog</title>
+    <link>http://localhost:1313/en/tags/paper-summary/</link>
+    <description>Recent content in Paper Summary on Kevin Y. Lin&#39;s Blog</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jul 2025 01:05:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/paper-summary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paper Summary: Quantum-limit Chern Topological Magnetism in TbMn₆Sn₆</title>
+      <link>http://localhost:1313/en/posts/summary-quantum-limit-chern-topological-magnetism/</link>
+      <pubDate>Tue, 08 Jul 2025 01:05:55 +0800</pubDate>
+      <guid>http://localhost:1313/en/posts/summary-quantum-limit-chern-topological-magnetism/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Author&lt;/strong&gt;: &lt;em&gt;Kevin Y. Lin&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;Affiliation&lt;/strong&gt;: Freshman, Southern University of Science and Technology (SUSTech), Shenzhen, Guangdong, China&lt;br&gt;
+&lt;strong&gt;Date&lt;/strong&gt;: July 8, 2025&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;In Kagome materials with strong spin-orbit coupling and out-of-plane magnetization, spin-polarized Dirac fermions are theoretically possible, analogous to the Haldane model. However, ideal quantum materials are lacking, posing experimental challenges.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-findings--evidence-of-quantum-limit-chern-magnet&#34;&gt;Key Findings / Evidence of Quantum-limit Chern Magnet&lt;/h2&gt;
+&lt;h3 id=&#34;1-spin-polarized-dirac-cones-with-landau-quantization&#34;&gt;1. Spin-polarized Dirac Cones with Landau Quantization&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Zero-field STM peak shifts linearly with magnetic field&lt;/strong&gt; due to the Zeeman effect:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

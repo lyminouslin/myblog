@@ -6,6 +6,7 @@ math = true
 katex = true
 author = "Kevin Y. Lin"
 categories = ["Paper Summary"]
+tags = ["Paper Summary"]
 +++
 
 **Author**: *Kevin Y. Lin*  

@@ -18,11 +18,27 @@
     <loc>http://localhost:1313/en/categories/paper-summary/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/en/tags/paper-summary/</loc>
+    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/en/posts/summary-quantum-limit-chern-topological-magnetism/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/en/posts/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/tags/</loc>
+    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/"
+                />
   </url><url>
     <loc>http://localhost:1313/en/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
@@ -39,17 +55,5 @@
   </url><url>
     <loc>http://localhost:1313/en/posts/munkres-manifolds-derivations/</loc>
     <lastmod>2025-06-22T00:41:15+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/"
-                />
   </url>
 </urlset>

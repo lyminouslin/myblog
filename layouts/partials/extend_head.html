@@ -11,3 +11,21 @@
     ]'>
   </script>
 {{ end }}
+
+{{ define "main" }}
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/tags/" class="button" style="
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      background-color: #eef;
+      border: 1px solid #ccd;
+      border-radius: 6px;
+      text-decoration: none;
+    ">
+      🏷️ Explore All Tags
+    </a>
+  </div>
+
+  {{ .Content }}
+{{ end }}
+
