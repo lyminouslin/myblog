@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kevinylin.org/en/categories/</loc>
+    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://kevinylin.org/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kevinylin.org/en/categories/"
+                />
+  </url><url>
+    <loc>https://kevinylin.org/en/categories/paper-summary/</loc>
+    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
+  </url><url>
     <loc>https://kevinylin.org/en/posts/summary-quantum-limit-chern-topological-magnetism/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
   </url><url>
@@ -23,18 +39,6 @@
   </url><url>
     <loc>https://kevinylin.org/en/posts/munkres-manifolds-derivations/</loc>
     <lastmod>2025-06-22T00:41:15+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/en/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/categories/"
-                />
   </url><url>
     <loc>https://kevinylin.org/en/tags/</loc>
     <xhtml:link
