@@ -5,6 +5,7 @@ draft = false
 math = true
 katex = true
 author = "Kevin Y. Lin"
+categories = ["Paper Summary"]
 +++
 
 **Author**: *Kevin Y. Lin*  
@@ -149,5 +150,5 @@ In Kagome materials with strong spin-orbit coupling and out-of-plane magnetizati
 
 ## Optional: Download Full PDF Report
 
-👉 [Click here to download the full PDF version](files/Summary_of_Quantum_limit_Chern_topological_magnetism_in_TbMn6Sn6.pdf)
+👉 [Click here to download the full PDF version](/files/Summary_of_Quantum_limit_Chern_topological_magnetism_in_TbMn6Sn6.pdf)
 
