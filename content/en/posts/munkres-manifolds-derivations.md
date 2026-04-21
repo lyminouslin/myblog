@@ -8,6 +8,7 @@ author = "Kevin Y. Lin"
 categories = ["Topology", "Mathematics"]
 tags = ["Manifolds", "Munkres", "Topology"]
 summary = "A short derivation-style note on why Munkres' definition of a boundaryless manifold excludes half-space charts."
+translationKey = "munkres-manifolds-derivations"
 +++
 Let \\( M \\) be a topological space. Following Munkres, we define \\( M \\) to be a \\( k \\)-dimensional manifold **without boundary** if:
 

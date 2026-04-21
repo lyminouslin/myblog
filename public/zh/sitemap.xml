@@ -2,73 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kevinylin.org/zh/tags/arpes/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/tags/arpes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/tags/arpes/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/categories/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/categories/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/tags/chern-%E7%A3%81%E6%80%A7/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/tags/kagome-%E6%9D%90%E6%96%99/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/tags/stm/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/tags/stm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/tags/stm/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/tags/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/tags/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/categories/%E9%87%8F%E5%AD%90%E6%9D%90%E6%96%99/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/categories/%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/posts/summary-quantum-limit-chern-topological-magnetism/</loc>
-    <lastmod>2025-07-08T01:05:55+08:00</lastmod>
-  </url><url>
     <loc>https://kevinylin.org/zh/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
     <xhtml:link
@@ -82,8 +15,18 @@
                 href="https://kevinylin.org/zh/"
                 />
   </url><url>
-    <loc>https://kevinylin.org/zh/tags/%E6%8B%93%E6%89%91%E7%89%A9%E6%80%81/</loc>
+    <loc>https://kevinylin.org/zh/posts/summary-quantum-limit-chern-topological-magnetism/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kevinylin.org/en/posts/summary-quantum-limit-chern-topological-magnetism/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://kevinylin.org/zh/posts/summary-quantum-limit-chern-topological-magnetism/"
+                />
   </url><url>
     <loc>https://kevinylin.org/zh/posts/</loc>
     <lastmod>2025-07-08T01:05:55+08:00</lastmod>
@@ -98,33 +41,18 @@
                 href="https://kevinylin.org/zh/posts/"
                 />
   </url><url>
-    <loc>https://kevinylin.org/zh/tags/munkres/</loc>
+    <loc>https://kevinylin.org/zh/posts/munkres-manifolds-derivations/</loc>
     <lastmod>2025-06-22T00:41:15+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://kevinylin.org/en/tags/munkres/"
+                href="https://kevinylin.org/en/posts/munkres-manifolds-derivations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://kevinylin.org/zh/tags/munkres/"
+                href="https://kevinylin.org/zh/posts/munkres-manifolds-derivations/"
                 />
-  </url><url>
-    <loc>https://kevinylin.org/zh/posts/munkres-manifolds-derivations/</loc>
-    <lastmod>2025-06-22T00:41:15+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/tags/%E6%B5%81%E5%BD%A2/</loc>
-    <lastmod>2025-06-22T00:41:15+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/categories/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2025-06-22T00:41:15+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/categories/%E6%8B%93%E6%89%91/</loc>
-    <lastmod>2025-06-22T00:41:15+08:00</lastmod>
-  </url><url>
-    <loc>https://kevinylin.org/zh/tags/%E6%8B%93%E6%89%91/</loc>
-    <lastmod>2025-06-22T00:41:15+08:00</lastmod>
   </url><url>
     <loc>https://kevinylin.org/zh/about/</loc>
     <xhtml:link
@@ -136,54 +64,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://kevinylin.org/zh/about/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/archive/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/archive/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/archive/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/now/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/now/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/now/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/search/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/search/"
-                />
-  </url><url>
-    <loc>https://kevinylin.org/zh/research/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kevinylin.org/en/research/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://kevinylin.org/zh/research/"
                 />
   </url>
 </urlset>

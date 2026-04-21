@@ -1,5 +1,1 @@
-{{- partial "command_palette.html" . -}}
-{{- with resources.Get "js/site.js" }}
-  {{- $siteJS := . | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
-  <script defer src="{{ $siteJS.RelPermalink }}" integrity="{{ $siteJS.Data.Integrity }}"></script>
-{{- end }}
+

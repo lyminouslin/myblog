@@ -1,11 +1,8 @@
 ---
-title: "About"
-description: "About Kevin Y. Lin, the research focus behind this site, and the writing standards for the notebook."
-layout: "about"
+title: "About me"
+description: "A short note about Kevin Y. Lin."
 translationKey: "about"
+layout: "about"
 ---
 
-I am an undergraduate in physics at SUSTech, interested in experimental condensed matter physics, quantum materials, topology, and the mathematical habits that make complicated ideas readable.
-
-The site is intentionally built like a lab notebook rather than a publication list. It should make the path from definition to measurement easier to follow.
-
+Kevin Y. Lin writes articles and notes here. The site is intentionally small: a name, a few links, and whatever survives the temptation to sound more important than it is.

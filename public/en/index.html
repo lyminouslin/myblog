@@ -1,33 +1,270 @@
-<!doctype html><html lang=en dir=auto><head><meta name=generator content="Hugo 0.147.8"><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Kevin Y. Lin</title><meta name=keywords content="condensed matter physics,quantum materials,topology,STM,ARPES,Bayesian inference"><meta name=description content="A research notebook for quantum materials, topology, spectroscopy, and mathematical thinking."><meta name=author content="Kevin Y. Lin"><link rel=canonical href=https://kevinylin.org/en/><link crossorigin=anonymous href=/assets/css/stylesheet.97042633673150c45365caf2b43a427f7d2628f7f0b6aecde127dbd53ee25dd4.css integrity="sha256-lwQmM2cxUMRTZcrytDpCf30mKPfwtq7N4Sfb1T7iXdQ=" rel="preload stylesheet" as=style><link rel=icon href=https://kevinylin.org/images/kevin.jpg><link rel=icon type=image/png sizes=16x16 href=https://kevinylin.org/images/kevin.jpg><link rel=icon type=image/png sizes=32x32 href=https://kevinylin.org/images/kevin.jpg><link rel=apple-touch-icon href=https://kevinylin.org/images/kevin.jpg><link rel=mask-icon href=https://kevinylin.org/safari-pinned-tab.svg><meta name=theme-color content="#f6f8f5"><meta name=msapplication-TileColor content="#f6f8f5"><link rel=alternate type=application/rss+xml href=https://kevinylin.org/en/index.xml><link rel=alternate type=application/json href=https://kevinylin.org/en/index.json><link rel=alternate hreflang=en href=https://kevinylin.org/en/><link rel=alternate hreflang=zh href=https://kevinylin.org/zh/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],throwOnError:!1})'></script><meta property="og:url" content="https://kevinylin.org/en/"><meta property="og:site_name" content="Kevin Y. Lin"><meta property="og:title" content="Welcome"><meta property="og:description" content="A research notebook for quantum materials, topology, spectroscopy, and mathematical thinking."><meta property="og:locale" content="en"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Welcome"><meta name=twitter:description content="A research notebook for quantum materials, topology, spectroscopy, and mathematical thinking."><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"Kevin Y. Lin","url":"https://kevinylin.org/en/","description":"Physics notes, quantum materials, topology, spectroscopy, and mathematical thinking.","logo":"https://kevinylin.org/images/kevin.jpg","sameAs":["https://github.com/lyminouslin","https://x.com/crypto_lunaii","https://math.stackexchange.com/users/1642272/kevin-lin"]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://kevinylin.org/en/ accesskey=h title="Kevin Y. Lin (Alt + H)">Kevin Y. Lin</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li>|</li><li><a href=https://kevinylin.org/zh/ title=中文 aria-label=中文>中文</a></li></ul></div></div><ul id=menu><li><a href=https://kevinylin.org/en/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://kevinylin.org/en/research/ title=Research><span>Research</span></a></li><li><a href=https://kevinylin.org/en/now/ title=Now><span>Now</span></a></li><li><a href=https://kevinylin.org/en/archive/ title=Archive><span>Archive</span></a></li><li><a href=https://kevinylin.org/en/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://kevinylin.org/en/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><section class=home-hero-clean aria-labelledby=home-title><div class=home-hero-clean__copy><p class=home-kicker>Quantum materials / spectroscopy / topology</p><h1 id=home-title>Kevin Y. Lin</h1><p class=home-subtitle>I study quantum materials through spectroscopy, topology, and electronic structure.</p><p class=home-support>Using STM, ARPES, and theory to trace how structure becomes topology and measurement.</p><div class=home-actions><a class="home-button home-button--primary" href=/en/research/>Explore Research</a>
-<a class=home-button href=/en/posts/>Read Notes</a></div></div><figure class=research-visual aria-label="Research visual"><canvas data-research-visual width=760 height=560 aria-hidden=true></canvas><figcaption><span>STM / ARPES</span>
-<span>Electronic structure</span>
-<span>Chern response</span></figcaption></figure></section><section class=home-section aria-labelledby=areas-title><div class=home-section__head><span>Research Focus</span><h2 id=areas-title>Organized around quantum materials and topological response.</h2></div><div class="area-grid area-grid--focused"><article class="area-card area-card--primary"><span>Quantum Materials</span><h3>Where lattice, orbital texture, and symmetry become measurable behavior.</h3><p>I track how microscopic structure produces phases that are visible in spectra, transport, and momentum-resolved experiments.</p><div class=home-chip-row><b>STM</b>
-<b>ARPES</b>
-<b>Landau levels</b></div></article><article class="area-card area-card--primary"><span>Chern Magnetism</span><h3>How magnetic order opens topological gaps.</h3><p>The working question is how Berry curvature, spin polarization, and band geometry leave signatures in edge states and Hall response.</p><div class=home-chip-row><b>Berry curvature</b>
-<b>Hall response</b>
-<b>Edge-state mapping</b></div></article><aside class=area-side aria-label="Adjacent threads"><article><span>Mathematical notes</span><h3>Manifolds</h3><p>Definitions, counterexamples, and derivations that support the main physics thread.</p></article><article><span>Adjacent inquiry</span><h3>Bayesian Inference</h3><p>A side track for model comparison, uncertainty, and scientific reasoning.</p></article></aside></div></section><section class=home-section aria-labelledby=notes-title><div class="home-section__head home-section__head--with-link"><div><span>Recent Writing</span><h2 id=notes-title>Enter through concrete notes.</h2></div><a class=home-text-link href=/en/posts/>Browse all notes</a></div><div class="selected-notes selected-notes--compact"><article><a href=https://kevinylin.org/en/posts/summary-quantum-limit-chern-topological-magnetism/><time datetime=2025-07-08>Jul 8, 2025</time><h3>Paper Summary: Quantum-limit Chern Topological Magnetism in TbMn6Sn6</h3><p>A structured reading note on quantum-limit Chern topological magnetism in TbMn6Sn6, focusing on Dirac fermions, Chern gaps, edge …</p></a></article><article><a href=https://kevinylin.org/en/posts/munkres-manifolds-derivations/><time datetime=2025-06-22>Jun 22, 2025</time><h3>Munkres Manifolds Derivations</h3><p>A short derivation-style note on why Munkres’ definition of a boundaryless manifold excludes half-space charts.</p></a></article></div></section><section class="home-section home-methods" aria-labelledby=methods-title><div class=home-section__head><span>Methods</span><h2 id=methods-title>Methods in service of the main thread.</h2></div><div class="method-list method-list--compact"><article><span>Experimental</span><p>STM / ARPES / Landau fan</p></article><article><span>Analytical</span><p>Band topology / Berry curvature / derivation</p></article></div></section><section class=home-now><div><span>Now</span><p>Currently reading on quantum-limit Chern magnetism, refining evidence chains in spectroscopy, and writing notes on manifold definitions.</p></div><a href=/en/now/>Open Now</a></section></main><footer class=footer><span>&copy; 2026 <a href=https://kevinylin.org/en/>Kevin Y. Lin</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><button class=site-command-button type=button data-command-open aria-label="Open command palette">
-<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class=command-shell data-command-shell hidden><div class=command-backdrop data-command-close></div><section class=command-palette role=dialog aria-modal=true aria-label="Command palette"><div class=command-palette__bar><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-<input type=search data-command-input placeholder="Jump to a page or note..." autocomplete=off></div><div class=command-list data-command-list data-empty="No matches"><a class=command-item href=/en/ data-command-keywords="home start index"><span>Home</span>
-<small>Site entry</small>
-</a><a class=command-item href=/en/posts/ data-command-keywords="Posts navigation menu"><span>Posts</span>
-<small>Navigation</small>
-</a><a class=command-item href=/en/research/ data-command-keywords="Research navigation menu"><span>Research</span>
-<small>Navigation</small>
-</a><a class=command-item href=/en/now/ data-command-keywords="Now navigation menu"><span>Now</span>
-<small>Navigation</small>
-</a><a class=command-item href=/en/archive/ data-command-keywords="Archive navigation menu"><span>Archive</span>
-<small>Navigation</small>
-</a><a class=command-item href=/en/tags/ data-command-keywords="Tags navigation menu"><span>Tags</span>
-<small>Navigation</small>
-</a><a class=command-item href=/en/search/ data-command-keywords="Search navigation menu"><span>Search</span>
-<small>Navigation</small>
-</a><a class=command-item href=/en/posts/summary-quantum-limit-chern-topological-magnetism/ data-command-keywords="Chern Magnetism Kagome Materials STM ARPES Topological Matter Paper Summary Quantum Materials A structured reading note on quantum-limit Chern topological magnetism in TbMn6Sn6, focusing on Dirac fermions, Chern gaps, edge states, and Berry-curvature transport."><span>Paper Summary: Quantum-limit Chern Topological Magnetism in TbMn6Sn6</span>
-<small>2025-07-08</small>
-</a><a class=command-item href=/en/posts/munkres-manifolds-derivations/ data-command-keywords="Manifolds Munkres Topology Topology Mathematics A short derivation-style note on why Munkres&rsquo; definition of a boundaryless manifold excludes half-space charts."><span>Munkres Manifolds Derivations</span>
-<small>2025-06-22</small></a></div></section></div><script defer src=/js/site.aeba6c45985fb8ab4b21bfebcc458b0f26120640d64888b283935c57da54416b.js integrity="sha256-rrpsRZhfuKtLIb/rzEWLDyYSBkDWSIiyg5NcV9pUQWs="></script><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=referrer content="strict-origin-when-cross-origin"><meta name=format-detection content="telephone=no"><title>Kevin Y. Lin</title><meta name=description content="Articles, notes, and occasional self-aware drivel."><meta name=author content="Kevin Y. Lin"><link rel=canonical href=https://kevinylin.org/en/><link rel=alternate hreflang=zh href=https://kevinylin.org/zh/><link rel=alternate hreflang=x-default href=https://kevinylin.org/en/><meta name=theme-color content="#f7f7f4" data-theme-color><script>(()=>{try{const s="kevinylin-theme",e=document.documentElement,t=["auto","light","dark"].includes(localStorage.getItem(s))?localStorage.getItem(s):"auto",i=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,n=t==="auto"?i?"dark":"light":t;e.dataset.themeMode=t,t==="auto"?e.removeAttribute("data-theme"):e.dataset.theme=t,e.style.colorScheme=n,e.style.backgroundColor=n==="dark"?"#0d0d0b":"#f7f7f4";const o=document.querySelector("meta[data-theme-color]");o&&o.setAttribute("content",n==="dark"?"#0d0d0b":"#f7f7f4")}catch{}})()</script><meta property="og:site_name" content="Kevin Y. Lin"><meta property="og:title" content="Kevin Y. Lin"><meta property="og:description" content="Articles, notes, and occasional self-aware drivel."><meta property="og:url" content="https://kevinylin.org/en/"><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:locale:alternate" content="zh_CN"><meta name=twitter:card content="summary"><meta name=twitter:title content="Kevin Y. Lin"><meta name=twitter:description content="Articles, notes, and occasional self-aware drivel."><link rel=preload href=/fonts/libre-baskerville-latin.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/extended/site.min.453b48f7e95542c8be92a330dfa179a11e5a1dec25ead8948f941507dba5b665.css integrity="sha256-RTtI9+lVQsi+kqMw36F5oR5aHewl6tiUj5QVB9ultmU=" crossorigin=anonymous><script defer src=/js/theme.9320f92cb866c9c21e519c71941a035895ffb188ff6ec3152e4b522aba9f6e1b.js integrity="sha256-kyD5LLhmycIeUZxxlBoDWJX/sYj/bsMVLktSKrqfbhs="></script><script defer src=/js/quotes.3bb92bae01cfdc62bef416e1ed0161eb505df38defe099d691750864d0a89bf8.js integrity="sha256-O7krrgHP3GK+9Bbh7QFh61Bd843v4JnWkXUIZNCom/g="></script><script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@id":"https://kevinylin.org/#person","@type":"Person","name":"Kevin Y. Lin","sameAs":["https://github.com/lyminouslin","https://x.com/crypto_lunaii","https://math.stackexchange.com/users/1642272/kevin-lin"],"url":"https://kevinylin.org/"},{"@id":"https://kevinylin.org/#website","@type":"WebSite","author":{"@id":"https://kevinylin.org/#person"},"inLanguage":["en","zh"],"name":"Kevin Y. Lin","url":"https://kevinylin.org/"},{"@id":"https://kevinylin.org/en/#webpage","@type":"WebPage","about":{"@id":"https://kevinylin.org/#person"},"description":"Articles, notes, and occasional self-aware drivel.","inLanguage":"en","isPartOf":{"@id":"https://kevinylin.org/#website"},"name":"Kevin Y. Lin","url":"https://kevinylin.org/en/"}]}</script></head><body class="site-body kind-home section-home lang-en" id=top><a class=skip-link href=#content>Skip to content</a><header class=site-header><div class=site-header__inner><a class=site-brand href=/en/ aria-label="Kevin Y. Lin">Kevin Y. Lin</a><div class=site-header__right><nav class=site-nav aria-label="Main navigation"><a href=/en/posts/>Articles</a><a href=/en/about/>About me</a>
+<a class=site-nav__lang href=/zh/ aria-label=中文>ZH</a></nav><button class=theme-toggle type=button data-theme-toggle aria-label="Theme: system" title="Theme: system">
+<svg class="theme-toggle__icon theme-toggle__icon--auto" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.25a8.75 8.75.0 100 17.5 8.75 8.75.0 000-17.5zm0 1.5v15a7.25 7.25.0 010-15z"/></svg>
+<svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.75a6.25 6.25.0 100 12.5 6.25 6.25.0 000-12.5zm0 1.5a4.75 4.75.0 110 9.5 4.75 4.75.0 010-9.5zM12 1.5a.75.75.0 01.75.75V3.6a.75.75.0 01-1.5.0V2.25A.75.75.0 0112 1.5zm0 18.15a.75.75.0 01.75.75v1.35a.75.75.0 01-1.5.0V20.4a.75.75.0 01.75-.75zM4.58 3.52a.75.75.0 011.06.02l.94.98A.75.75.0 115.5 5.56l-.94-.98a.75.75.0 01.02-1.06zm12.84 14.92a.75.75.0 011.08.0l.94.98a.75.75.0 11-1.08 1.04l-.94-.98a.75.75.0 010-1.04zM1.5 12a.75.75.0 01.75-.75H3.6a.75.75.0 010 1.5H2.25A.75.75.0 011.5 12zm18.15.0a.75.75.0 01.75-.75h1.35a.75.75.0 010 1.5H20.4a.75.75.0 01-.75-.75zM5.5 18.44a.75.75.0 011.08 1.04l-.94.98a.75.75.0 01-1.08-1.04l.94-.98zM18.36 3.54a.75.75.0 011.08 1.04l-.94.98a.75.75.0 11-1.08-1.04l.94-.98z"/></svg>
+<svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.53a.75.75.0 01.86.98A9.25 9.25.0 117.49 3.04a.75.75.0 01.98.86A7.75 7.75.0 0020.1 15.53zM6.8 5.08A7.75 7.75.0 1018.92 17.2 9.25 9.25.0 016.8 5.08z"/></svg>
+<span data-theme-toggle-label>System</span></button></div></div></header><main class=main id=content tabindex=-1><section class=home-minimal aria-labelledby=home-title><div class=home-minimal__identity><h1 id=home-title>Kevin Y. Lin</h1><div class=home-minimal__quote data-random-quote aria-label="Homepage quote"><p lang=en data-quote-en>There are two kinds of drivel in this world: the kind you know is drivel, and the kind you don't. ChatGPT has mastered the second. I strive for the first. Occasionally, I succeed.</p><p lang=zh-CN data-quote-zh>这世上有两种废话：一种是知道自己在说废话，一种是不知道。ChatGPT精通后者。我努力做前者，偶尔会成功。</p><p class=home-minimal__attribution data-quote-attribution>Kevin Y. Lin</p></div><div class=home-minimal__actions><nav class=social-minimal aria-label="Social links"><a href=https://github.com/lyminouslin rel="me noopener noreferrer" target=_blank aria-label=GitHub title=GitHub><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49.0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.07.0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71.0.0.84-.28 2.75 1.05A9.3 9.3.0 0112 7.01c.85.0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75.0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9.0 1.37-.01 2.47-.01 2.8.0.27.18.59.69.49A10.13 10.13.0 0022 12.26C22 6.58 17.52 2 12 2z"/></svg>
+<span>GitHub</span>
+</a><a href=https://x.com/crypto_lunaii rel="me noopener noreferrer" target=_blank aria-label=X title=X><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.24 10.52 22.64 1h-1.99l-7.3 8.27L7.52 1H.8l8.8 12.49L.8 23.46h1.99l7.69-8.72 6.14 8.72h6.72l-9.1-12.94zm-2.72 3.08-.89-1.24-7.09-9.9h3.03l5.73 8 .89 1.24 7.46 10.43h-3.03l-6.1-8.53z"/></svg>
+<span>X</span>
+</a><a href=https://math.stackexchange.com/users/1642272/kevin-lin rel="me noopener noreferrer" target=_blank aria-label=StackExchange title=StackExchange><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19.8h14v1.7H5v-1.7zm1.2-4.1h11.6v1.6H6.2v-1.6zm.4-3.8 11.5 1.2-.2 1.6-11.5-1.2.2-1.6zM8 8.2l10.8 3.2-.45 1.55-10.8-3.2L8 8.2zm2.35-3.55 9.25 5.85-.85 1.35L9.5 6l.85-1.35zM5 17.9h14V23H5v-5.1z"/></svg>
+<span>StackExchange</span></a></nav></div></div></section><script id=quote-bank type=text/plain>id	attribution	quote_en	quote_zh
+1	Oscar Wilde	I am not young enough to know everything.	我还没年轻到什么都懂的地步。
+2	Oscar Wilde	Be yourself; everyone else is already taken.	做你自己，因为别人都已经有人做了。
+3	Oscar Wilde	Every saint has a past, and every sinner has a future.	每个圣人都有过去，每个罪人都有未来。
+4	Oscar Wilde	To live is the rarest thing in the world. Most people exist, that is all.	活着是世界上最罕见的事情，大多数人只是存在而已。
+5	Oscar Wilde	We are all in the gutter, but some of us are looking at the stars.	我们都身陷泥沼，但其中有些人仰望着繁星。
+6	Oscar Wilde	Always forgive your enemies; nothing annoys them so much.	始终宽恕你的敌人，没有什么比这更令他们恼火的了。
+7	Oscar Wilde	The truth is rarely pure and never simple.	真相鲜少纯粹，也从不简单。
+8	Oscar Wilde	I can resist everything except temptation.	除了诱惑，我什么都能抗拒。
+9	Oscar Wilde	A cynic is a man who knows the price of everything and the value of nothing.	愤世嫉俗者，是那种知道一切事物的价格、却不知道任何事物的价值的人。
+10	Oscar Wilde	Experience is simply the name we give our mistakes.	经验不过是我们给自己错误起的名字。
+11	Oscar Wilde	There is only one thing in the world worse than being talked about, and that is not being talked about.	世上只有一件事比被人议论更糟，那就是没有人议论你。
+12	Oscar Wilde	Man is least himself when he talks in his own person. Give him a mask, and he will tell you the truth.	当一个人以自己的面目说话时，他是最不真实的；给他一个面具，他才会告诉你真相。
+13	Oscar Wilde	To define is to limit.	下定义即是设限。
+14	Oscar Wilde	The old believe everything; the middle-aged suspect everything; the young know everything.	老人相信一切；中年人怀疑一切；年轻人什么都知道。
+15	Oscar Wilde, The Picture of Dorian Gray	Nowadays people know the price of everything and the value of nothing.	如今的人们知道一切东西的价格，却不知道任何东西的价值。
+16	Mark Twain	The reports of my death are greatly exaggerated.	关于我死亡的报道，未免言过其实了。
+17	Mark Twain	It ain't what you don't know that gets you into trouble. It's what you know for sure that just ain't so.	让你陷入麻烦的，不是你不知道的事情，而是你那些并不正确的"确信"。
+18	Mark Twain	Whenever you find yourself on the side of the majority, it is time to pause and reflect.	每当你发现自己站在多数人那边时，就该停下来反思了。
+19	Mark Twain	If you tell the truth, you don't have to remember anything.	如果你说真话，就不用记住任何东西。
+20	Mark Twain	Good friends, good books, and a sleepy conscience: this is the ideal life.	良友、好书、慵懒的良知——这就是理想的生活。
+21	Mark Twain	A person who won't read has no advantage over one who can't read.	不愿读书的人，与不能读书的人，并无高下之分。
+22	Mark Twain	Clothes make the man. Naked people have little or no influence on society.	衣装造就人。裸体的人对社会几乎毫无影响力可言。
+23	Mark Twain	Never put off till tomorrow what you can do the day after tomorrow.	凡是可以后天做的事，绝不推迟到明天。
+24	Mark Twain	When in doubt, tell the truth.	当你犹豫不决时，就说实话。
+25	Mark Twain	The difference between the almost right word and the right word is really a large matter — it's the difference between the lightning bug and the lightning.	几乎正确的词与恰当的词之间差距悬殊——就像萤火虫与闪电的差距。
+26	Mark Twain	Truth is stranger than fiction, but it is because Fiction is obliged to stick to possibilities; Truth isn't.	真相比小说更离奇，因为小说必须遵循可能性，而现实不必如此。
+27	Mark Twain	Do the right thing. It will gratify some people and astonish the rest.	做正确的事。这会让一些人高兴，让其他人目瞪口呆。
+28	William Shakespeare, Hamlet	To be or not to be, that is the question.	生存还是毁灭，这是一个问题。
+29	William Shakespeare, As You Like It	All the world's a stage, and all the men and women merely players.	整个世界是一个舞台，所有男男女女不过是演员。
+30	William Shakespeare, Romeo and Juliet	What's in a name? That which we call a rose by any other name would smell as sweet.	名字意味着什么？玫瑰即使换个名字，依然芬芳如故。
+31	William Shakespeare, Hamlet	There is nothing either good or bad, but thinking makes it so.	世上本无善恶，思想使然。
+32	William Shakespeare, Hamlet	Brevity is the soul of wit.	简洁是智慧的灵魂。
+33	William Shakespeare, Hamlet	This above all: to thine own self be true.	最重要的是：对自己诚实。
+34	William Shakespeare, Julius Caesar	Cowards die many times before their deaths; the valiant never taste of death but once.	懦夫在真正死去之前，已历过多次死亡；而勇者只品尝一次死亡的滋味。
+35	William Shakespeare, The Merchant of Venice	The quality of mercy is not strained.	慈悲的品质不受任何强迫。
+36	William Shakespeare, Romeo and Juliet	Good night, good night! Parting is such sweet sorrow, that I shall say good night till it be morrow.	晚安，晚安！离别是如此甜蜜的悲伤，我要一直道晚安直到天明。
+37	William Shakespeare, The Merchant of Venice	If you prick us, do we not bleed? If you tickle us, do we not laugh?	如果你刺我们，我们不会流血吗？如果你挠我们，我们不会大笑吗？
+38	William Shakespeare, Hamlet	What a piece of work is a man!	人类是多么了不起的杰作！
+39	William Shakespeare, A Midsummer Night's Dream	The course of true love never did run smooth.	真爱的道路从来不会一帆风顺。
+40	William Shakespeare, Hamlet	We know what we are, but know not what we may be.	我们知道自己是什么，却不知道我们可能成为什么。
+41	William Shakespeare, Twelfth Night	Some are born great, some achieve greatness, and some have greatness thrust upon them.	有些人生来伟大，有些人靠奋斗取得伟大，有些人则是被伟大所加诸。
+42	William Shakespeare, The Merchant of Venice	All that glitters is not gold.	闪光的并非都是金子。
+43	George Orwell, Animal Farm	All animals are equal, but some animals are more equal than others.	所有动物生而平等，但有些动物比其他动物更加平等。
+44	George Orwell, Nineteen Eighty-Four	War is peace. Freedom is slavery. Ignorance is strength.	战争即和平，自由即奴役，无知即力量。
+45	George Orwell, Nineteen Eighty-Four	Who controls the past controls the future. Who controls the present controls the past.	谁控制了过去，谁就控制了未来；谁控制了现在，谁就控制了过去。
+46	George Orwell	If liberty means anything at all, it means the right to tell people what they do not want to hear.	自由若有任何意义，它就意味着有权告诉人们他们不想听的话。
+47	George Orwell, Politics and the English Language	Political language is designed to make lies sound truthful and murder respectable.	政治语言的设计目的，是让谎言听起来像真理，让暴行显得体面可敬。
+48	George Orwell, Animal Farm	Four legs good, two legs bad.	四条腿好，两条腿坏。
+49	George Orwell, Nineteen Eighty-Four	Big Brother is watching you.	老大哥在看着你。
+50	George Orwell, Nineteen Eighty-Four	Doublethink means the power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them.	双重思想是指在头脑中同时持有两种相互矛盾的信念，并且对两者都坚信不疑的能力。
+51	Winston Churchill	We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets.	我们将在海滩作战，在登陆地作战，在田野和街头作战。
+52	Winston Churchill	Never in the field of human conflict was so much owed by so many to so few.	在人类冲突的历史上，从未有如此众多的人对如此少数的人欠下如此深重的恩情。
+53	Winston Churchill	A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty.	悲观者在每一个机遇中看到困难，乐观者在每一个困难中看到机遇。
+54	Winston Churchill	Success consists of going from failure to failure without loss of enthusiasm.	成功在于从一次失败走向另一次失败，而始终不丧失热情。
+55	Winston Churchill	Tact is the ability to tell someone to go to hell in such a way that they look forward to the trip.	圆滑是一种能力，让你以一种令对方期待此行的方式，叫他去见鬼。
+56	Winston Churchill	If you're going through hell, keep going.	如果你正在经历地狱，那就继续走下去。
+57	Winston Churchill	History will be kind to me for I intend to write it.	历史会善待我，因为我打算亲自来书写它。
+58	Winston Churchill	The price of greatness is responsibility.	伟大的代价是责任。
+59	Winston Churchill	To improve is to change; to be perfect is to change often.	进步即是改变，完美则需不断改变。
+60	Winston Churchill	Courage is what it takes to stand up and speak; courage is also what it takes to sit down and listen.	勇气是站起来发言所需要的；同样，坐下来倾听也需要勇气。
+61	Albert Einstein	Imagination is more important than knowledge.	想象力比知识更重要。
+62	Albert Einstein	Life is like riding a bicycle. To keep your balance, you must keep moving.	生活如同骑自行车，要保持平衡，你就必须不断前行。
+63	Albert Einstein	Try not to become a man of success, but rather try to become a man of value.	不要努力成为一个成功的人，而要努力成为一个有价值的人。
+64	Albert Einstein	The true sign of intelligence is not knowledge but imagination.	智慧的真正标志不是知识，而是想象力。
+65	Albert Einstein	Logic will get you from A to Z; imagination will get you everywhere.	逻辑能带你从A到Z，而想象力能带你去任何地方。
+66	Albert Einstein	Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.	有两样东西是无限的：宇宙与人类的愚蠢。不过关于宇宙，我还不确定。
+67	Albert Einstein	Science without religion is lame, religion without science is blind.	没有宗教的科学是跛脚的，没有科学的宗教是盲目的。
+68	Albert Einstein	Peace cannot be kept by force; it can only be achieved by understanding.	和平不能靠武力维持，只能通过相互理解来实现。
+69	Charles Dickens, A Tale of Two Cities	It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness.	这是最好的时代，这是最坏的时代，这是智慧的年代，这是愚蠢的年代。
+70	Charles Dickens	No one is useless in this world who lightens the burdens of another.	在这个世界上，能减轻他人负担的人，绝不是无用之人。
+71	Charles Dickens, Great Expectations	We need never be ashamed of our tears.	我们永远不必为自己的眼泪感到羞愧。
+72	Charles Dickens	Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.	愿你拥有一颗永不冷漠的心，一份永不疲倦的性情，以及一双永不伤人的手。
+73	Charles Dickens, Great Expectations	Suffering has been stronger than all other teaching, and has taught me to understand what your heart used to be.	苦难的教诲胜过一切，它让我懂得了你的心曾经是怎样的。
+74	Charles Dickens	There are books of which the backs and covers are by far the best parts.	有些书，封面和封底是远胜于正文的部分。
+75	Charles Dickens, Martin Chuzzlewit	Charity begins at home, and justice begins next door.	慈善始于家庭，正义始于邻里。
+76	Abraham Lincoln	You can fool all the people some of the time, and some of the people all the time, but you cannot fool all the people all the time.	你能在所有时间欺骗一部分人，也能在一段时间欺骗所有人，但你不能在所有时间欺骗所有人。
+77	Abraham Lincoln	Whatever you are, be a good one.	无论你是什么，都要做一个好的。
+78	Abraham Lincoln	No man has a good enough memory to be a successful liar.	没有人拥有足够好的记忆力，能成为一个成功的说谎者。
+79	Abraham Lincoln	Better to remain silent and be thought a fool than to speak out and remove all doubt.	沉默而被认为是傻瓜，好过开口说话而令人确信无疑。
+80	Abraham Lincoln	In the end, it's not the years in your life that count. It's the life in your years.	最终，重要的不是你活了多少年，而是你的岁月里有多少生命的厚度。
+81	Abraham Lincoln	Give me six hours to chop down a tree and I will spend the first four sharpening the axe.	给我六个小时砍一棵树，我会先花四个小时磨斧头。
+82	Abraham Lincoln	My best friend is a person who will give me a book I have not read.	能送我一本我尚未读过的书的人，就是我最好的朋友。
+83	Socrates (from Plato's Apology)	The unexamined life is not worth living.	未经审视的生活，不值得过。
+84	Will Durant, paraphrasing Aristotle	We are what we repeatedly do. Excellence, then, is not an act, but a habit.	我们是我们反复所做之事的结果。因此，卓越不是一种行为，而是一种习惯。
+85	Aristotle	The roots of education are bitter, but the fruit is sweet.	教育的根是苦涩的，但其果实是甜美的。
+86	Aristotle	Knowing yourself is the beginning of all wisdom.	认识自己，是一切智慧的开端。
+87	Aristotle	It is the mark of an educated mind to be able to entertain a thought without accepting it.	能够持有一个思想而不接受它，是受过教育的心灵的标志。
+88	Aristotle	Educating the mind without educating the heart is no education at all.	只教育头脑而不教育心灵，根本谈不上是教育。
+89	Plato (attributed)	Wise men speak because they have something to say; fools because they have to say something.	智者开口，因为他有话要说；愚者开口，因为他必须说点什么。
+90	Socrates (paraphrase from Plato's Apology)	I know that I know nothing.	我唯一知道的，就是我什么都不知道。
+91	Karl Marx, The Eighteenth Brumaire of Louis Bonaparte	History repeats itself, first as tragedy, second as farce.	历史总是重演，第一次是悲剧，第二次是闹剧。
+92	Karl Marx & Friedrich Engels, The Communist Manifesto	Workers of the world, unite! You have nothing to lose but your chains.	全世界无产者，联合起来！你们失去的只是枷锁。
+93	Karl Marx, A Contribution to the Critique of Hegel's Philosophy of Right	Religion is the opium of the people.	宗教是人民的鸦片。
+94	Karl Marx, Critique of the Gotha Programme	From each according to his ability, to each according to his needs.	各尽所能，按需分配。
+95	Karl Marx, Theses on Feuerbach	The philosophers have only interpreted the world in various ways. The point, however, is to change it.	哲学家们只是用不同的方式解释世界，而问题在于改变世界。
+96	Mahatma Gandhi (widely attributed)	Be the change you wish to see in the world.	成为你希望在世界上看到的改变。
+97	Mahatma Gandhi	An eye for an eye only ends up making the whole world blind.	以眼还眼，只会让整个世界都变成瞎子。
+98	Mahatma Gandhi	The weak can never forgive. Forgiveness is the attribute of the strong.	懦弱者永远不能原谅他人，宽恕是强者的特质。
+99	Mahatma Gandhi (attributed)	First they ignore you, then they laugh at you, then they fight you, then you win.	起初他们无视你，然后嘲笑你，然后与你抗争，最终你赢了。
+100	Mahatma Gandhi	Live as if you were to die tomorrow. Learn as if you were to live forever.	活着，就好像明天你将死去。学习，就好像你将永远活着。
+101	Friedrich Nietzsche, Twilight of the Idols	That which does not kill us makes us stronger.	杀不死我们的，终将使我们更强大。
+102	Friedrich Nietzsche, Twilight of the Idols	Without music, life would be a mistake.	没有音乐，生命将是一个错误。
+103	Friedrich Nietzsche, Thus Spoke Zarathustra	One must still have chaos in oneself to be able to give birth to a dancing star.	一个人内心仍须有混沌，才能孕育出一颗舞动的星辰。
+104	Friedrich Nietzsche, Beyond Good and Evil	In individuals, insanity is rare; but in groups, parties, nations and epochs, it is the rule.	个体中疯狂罕见，但在群体、政党、国家和时代中，它却是惯例。
+105	Friedrich Nietzsche, Thus Spoke Zarathustra	The higher we soar, the smaller we appear to those who cannot fly.	我们飞翔得越高，在那些无法飞翔的人眼中，我们看起来就越渺小。
+106	Friedrich Nietzsche	There are no facts, only interpretations.	世上没有事实，只有诠释。
+107	Friedrich Nietzsche, Twilight of the Idols	He who has a why to live can bear almost any how.	有了活下去的理由，几乎任何方式都能承受。
+108	Friedrich Nietzsche, The Gay Science	God is dead. God remains dead. And we have killed him.	上帝死了。上帝依然死着。是我们杀死了他。
+109	Virginia Woolf	You cannot find peace by avoiding life.	逃避生活，你找不到平静。
+110	Virginia Woolf, A Room of One's Own	Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.	你们尽可以关闭图书馆；但没有任何门、任何锁、任何门闩，能锁住我自由的思想。
+111	Virginia Woolf, A Room of One's Own	A woman must have money and a room of her own if she is to write fiction.	一个女人若要写小说，必须有钱，有一间属于自己的房间。
+112	Virginia Woolf, A Room of One's Own	I thought how unpleasant it is to be locked out; and I thought how it is worse, perhaps, to be locked in.	我想，被拒于门外固然令人不快；但被关在门内，也许更糟。
+113	Virginia Woolf, The Waves	I am not one and simple, but complex and many.	我不是单一简单的，而是复杂而多面的。
+114	Ernest Hemingway, A Farewell to Arms	The world breaks everyone, and afterward, many are stronger at the broken places.	世界将每个人击垮，此后，许多人在受伤之处变得更加坚强。
+115	Ernest Hemingway	The best way to find out if you can trust somebody is to trust them.	判断你是否能信任一个人的最好方法，就是去信任他。
+116	Ernest Hemingway	There is no friend as loyal as a book.	没有比一本书更忠实的朋友了。
+117	Ernest Hemingway	Courage is grace under pressure.	勇气是压力之下的优雅。
+118	Ernest Hemingway	The first draft of anything is garbage.	任何东西的初稿都是垃圾。
+119	Ernest Hemingway, A Moveable Feast	All you have to do is write one true sentence. Write the truest sentence that you know.	你所要做的，就是写一个真实的句子。写出你所知道的最真实的句子。
+120	Ernest Hemingway	Every man's life ends the same way. It is only the details of how he lived and how he died that distinguish one man from another.	每个人的生命都以同样的方式终结。只有他活着和死去的细节，才能将一个人与另一个人区分开来。
+121	F. Scott Fitzgerald, The Great Gatsby	So we beat on, boats against the current, borne back ceaselessly into the past.	于是我们奋力向前，却如同逆水行舟，不断地被推回到过去。
+122	F. Scott Fitzgerald, The Crack-Up	The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.	一流智慧的检验标准，是在头脑中同时持有两种对立的想法、却仍能正常运作的能力。
+123	F. Scott Fitzgerald	Show me a hero, and I'll write you a tragedy.	给我一个英雄，我就能为你写出一出悲剧。
+124	F. Scott Fitzgerald	Never confuse a single defeat with a final defeat.	永远不要把一次失败与最终的失败混为一谈。
+125	F. Scott Fitzgerald, The Great Gatsby	I hope she'll be a fool — that's the best thing a girl can be in this world, a beautiful little fool.	我希望她是个傻瓜——在这个世界上，一个漂亮的小傻瓜，是一个女孩所能成为的最好的东西。
+126	Jane Austen, Pride and Prejudice	It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.	一个有钱的单身男人，必然渴望娶一位太太，这已经成为举世公认的真理。
+127	Jane Austen, Pride and Prejudice	I declare after all there is no enjoyment like reading!	我坚持认为，终究没有什么享受比得上读书！
+128	Jane Austen, Northanger Abbey	There is nothing I would not do for those who are really my friends.	对于真正的朋友，我没有什么是不愿意做的。
+129	Jane Austen, Pride and Prejudice	A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.	女人的想象力极为迅速；她能在瞬间从仰慕跳跃到爱慕，从爱慕跳跃到婚姻。
+130	Jane Austen, Emma	One half of the world cannot understand the pleasures of the other.	世界上一半的人，永远无法理解另一半的快乐。
+131	J.R.R. Tolkien, The Fellowship of the Ring	Not all those who wander are lost.	并非所有漫游者都迷失了方向。
+132	J.R.R. Tolkien, The Fellowship of the Ring	All we have to decide is what to do with the time that is given us.	我们所要决定的，只是如何善用给予我们的时间。
+133	J.R.R. Tolkien, The Fellowship of the Ring	Even the smallest person can change the course of the future.	即使最渺小的人，也能改变未来的走向。
+134	J.R.R. Tolkien, The Two Towers	There is some good in this world, and it's worth fighting for.	这个世界上有一些美好，值得我们为之战斗。
+135	J.R.R. Tolkien, The Return of the King	I will not say: do not weep; for not all tears are an evil.	我不会说：不要哭泣；因为并非所有的眼泪都是坏事。
+136	Maya Angelou, I Know Why the Caged Bird Sings	There is no greater agony than bearing an untold story inside you.	没有比把一个未讲述的故事埋藏在心中更大的痛苦了。
+137	Maya Angelou	You may not control all the events that happen to you, but you can decide not to be reduced by them.	你也许无法控制发生在你身上的所有事，但你可以决定不被它们所压垮。
+138	Maya Angelou	Nothing will work unless you do.	除非你行动起来，否则什么都不会奏效。
+139	Maya Angelou	I sustain myself with the love of family.	家人的爱，是我自我维系的力量。
+140	Benjamin Franklin	An investment in knowledge pays the best interest.	知识上的投资，回报最为丰厚。
+141	Benjamin Franklin	Early to bed and early to rise makes a man healthy, wealthy, and wise.	早睡早起，使人健康、富有而智慧。
+142	Benjamin Franklin (attributed)	Tell me and I forget. Teach me and I remember. Involve me and I learn.	告诉我，我会忘记；教导我，我会记住；让我参与，我才会真正学到。
+143	Benjamin Franklin	In this world, nothing is certain except death and taxes.	在这个世界上，除了死亡和税收，没有什么是确定的。
+144	Benjamin Franklin, Poor Richard's Almanack	Three can keep a secret, if two of them are dead.	三个人可以保守一个秘密——前提是其中两个已经死了。
+145	Voltaire	If God did not exist, it would be necessary to invent him.	如果上帝不存在，就有必要把他创造出来。
+146	Voltaire (attributed)	Judge a man by his questions rather than his answers.	以一个人的问题而非答案来评判他。
+147	Voltaire	The secret of being a bore is to tell everything.	令人厌烦的秘诀，就是什么都说。
+148	Voltaire, Philosophical Dictionary	Common sense is not so common.	常识并不那么普遍。
+149	Voltaire	Superstition is to religion what astrology is to astronomy: the mad daughter of a wise mother.	迷信之于宗教，犹如占星术之于天文学：是一个智慧母亲的疯狂女儿。
+150	Bertrand Russell	The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts.	世界的全部问题在于，愚人和狂热者对自己如此确信无疑，而明智的人心中却充满怀疑。
+151	Bertrand Russell, Marriage and Morals	To fear love is to fear life, and those who fear life are already three parts dead.	害怕爱，就是害怕生命；而那些害怕生命的人，已经死去了大半。
+152	Bertrand Russell, What I Believe	The good life is one inspired by love and guided by knowledge.	美好的生活，是由爱所激励、由知识所引导的生活。
+153	Bertrand Russell	One of the symptoms of an approaching nervous breakdown is the belief that one's work is terribly important.	即将神经崩溃的症状之一，就是相信自己的工作极端重要。
+154	Bertrand Russell (attributed)	War does not determine who is right — only who is left.	战争不能决定谁是正确的——只能决定谁还活着。
+155	George Bernard Shaw	Progress is impossible without change, and those who cannot change their minds cannot change anything.	没有改变就不可能有进步，而那些无法改变思想的人什么都改变不了。
+156	George Bernard Shaw	A life spent making mistakes is not only more honorable, but more useful than a life spent doing nothing.	一生在错误中度过，不仅比无所事事的一生更光荣，也更有价值。
+157	George Bernard Shaw, Immaturity (Preface)	If you cannot get rid of the family skeleton, you may as well make it dance.	如果你无法摆脱家族的丑闻，不妨让它翩翩起舞。
+158	George Bernard Shaw	Democracy is a device that ensures we shall be governed no better than we deserve.	民主是一种机制，确保我们的统治水平不会超出我们应得的程度。
+159	George Bernard Shaw	Beware of false knowledge; it is more dangerous than ignorance.	当心错误的知识，它比无知更危险。
+160	George Bernard Shaw	We don't stop playing because we grow old; we grow old because we stop playing.	我们不是因为变老而停止玩耍，而是因为停止玩耍才变老。
+161	George Bernard Shaw (attributed)	The single biggest problem in communication is the illusion that it has taken place.	沟通中最大的问题，是沟通已经发生的错觉。
+162	George Bernard Shaw (attributed)	Life isn't about finding yourself. Life is about creating yourself.	生活不是找到自己，而是创造自己。
+163	Leo Tolstoy	Everyone thinks of changing the world, but no one thinks of changing himself.	每个人都想改变世界，却没有人想到改变自己。
+164	Leo Tolstoy, Anna Karenina	If you look for perfection, you'll never be content.	如果你追求完美，你将永远无法满足。
+165	Leo Tolstoy, War and Peace	The strongest of all warriors are these two — time and patience.	最强大的两位战士是时间与耐心。
+166	Leo Tolstoy	Wrong does not cease to be wrong because the majority share in it.	错误的事情，不会因为多数人参与其中就不再是错误。
+167	Leo Tolstoy	If you want to be happy, be.	如果你想快乐，那就快乐吧。
+168	Fyodor Dostoevsky, Crime and Punishment	Pain and suffering are always inevitable for a large intelligence and a deep heart.	对于一个敏锐的头脑和深邃的心灵而言，痛苦与磨难是永远不可避免的。
+169	Fyodor Dostoevsky, The Brothers Karamazov	The mystery of human existence lies not in just staying alive, but in finding something to live for.	人类存在的奥秘，不在于活着本身，而在于找到活着的意义。
+170	Fyodor Dostoevsky, The Idiot	Beauty will save the world.	美将拯救世界。
+171	Fyodor Dostoevsky, Crime and Punishment	Man grows used to everything, the scoundrel!	人能适应一切，这个坏蛋！
+172	Fyodor Dostoevsky (attributed)	To love someone means to see them as God intended them.	爱一个人，意味着以上帝所设想的样子去看待他们。
+173	Franz Kafka	A book must be the axe for the frozen sea within us.	一本书必须是能击破我们内心冰封之海的斧头。
+174	Franz Kafka (attributed)	Youth is happy because it has the capacity to see beauty. Anyone who keeps the ability to see beauty never grows old.	青春是快乐的，因为它有发现美的能力。任何保有发现美的能力的人，都永远不会老去。
+175	Franz Kafka (recorded by Max Brod)	There is infinite hope, but not for us.	希望是有的，无限的希望——只是不属于我们。
+176	Albert Camus	In the midst of winter, I found there was, within me, an invincible summer.	在严冬之中，我终于发现，在我内心深处，有一个不可征服的夏天。
+177	Albert Camus	You will never be happy if you continue to search for what happiness consists of.	如果你继续探寻幸福由何构成，你将永远无法快乐。
+178	Albert Camus	The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.	与不自由的世界打交道的唯一方式，是成为如此绝对自由之人，以至于你的存在本身即是一种反叛。
+179	Albert Camus, The Rebel	Man is the only creature who refuses to be what he is.	人是唯一一个拒绝成为自身所是的生物。
+180	Albert Camus, The Myth of Sisyphus	The absurd is born of the confrontation between the human need and the unreasonable silence of the world.	荒诞诞生于人类的渴求与世界无理沉默之间的对峙。
+181	Jean-Paul Sartre, No Exit	Hell is other people.	他人即地狱。
+182	Jean-Paul Sartre, Being and Nothingness	We are condemned to be free.	我们被判处自由。
+183	Jean-Paul Sartre	Life has no meaning a priori. It is up to you to give it a meaning, and value is nothing but the meaning that you choose.	生命先天没有意义。给它赋予意义，是你的责任，而价值不过是你所选择的意义。
+184	Pablo Picasso	Art is a lie that makes us realize the truth.	艺术是让我们看清真相的谎言。
+185	Pablo Picasso	Everything you can imagine is real.	你所能想象的一切都是真实的。
+186	Pablo Picasso	Every child is an artist. The problem is how to remain an artist once he grows up.	每个孩子都是艺术家，问题在于长大后如何继续保持艺术家的本质。
+187	Martin Luther King Jr., Strength to Love	Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.	黑暗无法驱逐黑暗，只有光明才能做到。仇恨无法驱逐仇恨，只有爱才能做到。
+188	Martin Luther King Jr.	In the end, we will remember not the words of our enemies, but the silence of our friends.	到最后，我们铭记的不是敌人的话语，而是朋友的沉默。
+189	Martin Luther King Jr.	The time is always right to do what is right.	做正确的事，任何时候都不嫌晚。
+190	Martin Luther King Jr.	Faith is taking the first step even when you don't see the whole staircase.	信念，是在看不见整段楼梯时，依然迈出第一步。
+191	Martin Luther King Jr.	I have a dream that one day this nation will rise up and live out the true meaning of its creed.	我有一个梦想，有一天这个国家将挺身而起，真正实践其信条的真谛。
+192	Nelson Mandela	It always seems impossible until it's done.	事情在完成之前，总是看起来不可能。
+193	Nelson Mandela	Education is the most powerful weapon which you can use to change the world.	教育是你改变世界所能使用的最强大武器。
+194	Nelson Mandela, Long Walk to Freedom	I learned that courage was not the absence of fear, but the triumph over it.	我懂得了勇气不是没有恐惧，而是战胜了恐惧。
+195	Theodore Roosevelt	Do what you can, with what you have, where you are.	用你拥有的，在你所在之处，做你所能做的。
+196	Theodore Roosevelt	Believe you can and you're halfway there.	相信自己能做到，你就已经成功了一半。
+197	Theodore Roosevelt, Citizenship in a Republic	It is not the critic who counts; not the man who points out how the strong man stumbles.	重要的不是那个批评者，不是指出强者如何跌倒的人。
+198	Theodore Roosevelt	The only man who never makes mistakes is the man who never does anything.	从不犯错的人，是从不做任何事的人。
+199	Theodore Roosevelt	Keep your eyes on the stars, and your feet on the ground.	眼望繁星，脚踏大地。
+200	T.S. Eliot, The Waste Land	April is the cruellest month.	四月是最残忍的月份。
+201	T.S. Eliot, The Hollow Men	This is the way the world ends, not with a bang but a whimper.	世界就是这样终结的，不是轰然一声，而是轻轻一叹。
+202	T.S. Eliot, Little Gidding	We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time.	我们永不停止探索，而我们一切探索的终点，将是到达我们出发的地方，然后第一次真正认识它。
+203	T.S. Eliot, Tradition and the Individual Talent	Poetry is not a turning loose of emotion, but an escape from emotion; it is not the expression of personality, but an escape from personality.	诗歌不是情感的放纵，而是情感的逃脱；不是个性的表达，而是个性的逃脱。
+204	T.S. Eliot, Burnt Norton	Human kind cannot bear very much reality.	人类无法承受太多现实。
+205	W.B. Yeats, The Second Coming	Things fall apart; the centre cannot hold.	万物崩裂，中心难以维系。
+206	W.B. Yeats, The Second Coming	The best lack all conviction, while the worst are full of passionate intensity.	最优秀的人缺乏一切信念，而最糟糕的人却充满了激情的狂热。
+207	W.B. Yeats (attributed)	Education is not the filling of a pail, but the lighting of a fire.	教育不是注满一桶水，而是点燃一把火。
+208	Lord Acton	Power tends to corrupt, and absolute power corrupts absolutely.	权力倾向于腐化人心，而绝对的权力则使人绝对地腐化。
+209	Rudyard Kipling	Words are, of course, the most powerful drug used by mankind.	文字，当然是人类所使用的最强大的毒品。
+210	Rudyard Kipling, If—	If you can meet with Triumph and Disaster and treat those two impostors just the same.	如果你能与胜利和灾难相遇，并同样以平常心对待这两个骗子。
+211	Rudyard Kipling, If—	If you can keep your head when all about you are losing theirs and blaming it on you.	如果你在众人慌乱并将过错归咎于你时，仍能保持清醒。
+212	Samuel Johnson	When a man is tired of London, he is tired of life.	当一个人厌倦了伦敦，他就厌倦了生活。
+213	Samuel Johnson (attributed)	The true measure of a man is how he treats someone who can do him absolutely no good.	衡量一个人真正品格的标准，是他如何对待对他毫无益处的人。
+214	Samuel Johnson	No man but a blockhead ever wrote except for money.	只有傻瓜才会在没有报酬的情况下写作。
+215	Robert Frost, The Road Not Taken	Two roads diverged in a wood, and I — I took the one less traveled by, and that has made all the difference.	林中分出两条路，而我——我选择了那条人迹罕至的路，这使一切大相径庭。
+216	Robert Frost	In three words I can sum up everything I've learned about life: it goes on.	我可以用三个词概括我对生命的所有了解：它继续前行。
+217	Robert Frost, A Servant to Servants	The best way out is always through.	走出困境的最好方法，始终是穿越它。
+218	John Steinbeck, East of Eden	And now that you don't have to be perfect, you can be good.	既然你不必追求完美，你就可以去做一个好人了。
+219	John Steinbeck, Travels with Charley	A journey is a person in itself; no two are alike.	旅程本身就是一个独立的存在；没有两段旅程是相同的。
+220	John Steinbeck	The writer must believe that what he is doing is the most important thing in the world.	作家必须相信，他所做的事是世界上最重要的事情。
+221	C.S. Lewis	You can never get a cup of tea large enough or a book long enough to suit me.	对我来说，茶永远不嫌多，书永远不嫌长。
+222	C.S. Lewis	There are far, far better things ahead than any we leave behind.	前方还有无比美好的事物，远胜过我们所抛下的一切。
+223	C.S. Lewis, The Four Loves	Friendship is born at that moment when one person says to another: What! You too? I thought I was the only one.	友谊诞生于这样的瞬间：当一个人对另一个人说："什么！你也是？我以为只有我一个人这样。"
+224	C.S. Lewis, Mere Christianity	Even in literature and art, no man who bothers about originality will ever be original.	即使在文学和艺术中，凡是刻意追求独创性的人，也永远无法真正独创。
+225	Epictetus	It's not what happens to you, but how you react to it that matters.	重要的不是发生在你身上的事，而是你如何回应。
+226	Epictetus	He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.	智者不为自己所没有的东西悲伤，而是为自己所拥有的东西喜悦。
+227	Epictetus	First, say to yourself what you would be; and then do what you have to do.	首先，告诉自己你想成为什么；然后去做你必须做的事情。
+228	Marcus Aurelius, Meditations	The happiness of your life depends upon the quality of your thoughts.	你的生命的幸福，取决于你思想的品质。
+229	Marcus Aurelius, Meditations	You have power over your mind — not outside events. Realize this, and you will find strength.	你对自己的心灵拥有掌控权，而非对外部事件。认识到这一点，你就会找到力量。
+230	Marcus Aurelius, Meditations	The object of life is not to be on the side of the majority, but to escape finding oneself in the ranks of the insane.	生命的目标不是站在多数人那边，而是避免将自己归入疯子之列。
+231	Marcus Aurelius, Meditations	Waste no more time arguing about what a good man should be. Be one.	不要再浪费时间争论好人应该是什么样的，去成为一个好人吧。
+232	Marcus Aurelius, Meditations	When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.	当你清晨醒来，想想活着是多么宝贵的特权——能够呼吸、思考、享受、去爱。
+233	Seneca (attributed)	Luck is what happens when preparation meets opportunity.	运气，是当准备与机遇相遇时所发生的事情。
+234	Seneca, Letters from a Stoic	We suffer more often in imagination than in reality.	我们在想象中受的苦，往往比在现实中更多。
+235	Seneca, Letters from a Stoic	Begin at once to live, and count each separate day as a separate life.	立刻开始生活，把每一天都当作一段独立的人生。
+236	Seneca, Letters from a Stoic	If you wished to be loved, love.	若你希望被爱，先去爱吧。
+237	Niccolò Machiavelli, The Prince	It is better to be feared than loved, if you cannot be both.	如果不能两者兼得，被人畏惧好过被人爱戴。
+238	Niccolò Machiavelli, Discourses on Livy	Never was anything great achieved without danger.	没有危险，伟大的事情从未成就。
+239	Thomas Jefferson	I cannot live without books.	没有书，我无法生活。
+240	Thomas Jefferson	The tree of liberty must be refreshed from time to time with the blood of patriots and tyrants.	自由之树必须时常以爱国者和暴君的鲜血来浇灌。
+241	Thomas Jefferson (attributed)	Do you want to know who you are? Don't ask. Act! Action will delineate and define you.	你想知道你是谁吗？别问，去行动！行动会描绘并定义你。
+242	Rainer Maria Rilke, Letters to a Young Poet	I want to beg you, as much as I can, to be patient toward all that is unsolved in your heart and to try to love the questions themselves.	我要尽我所能地恳请你，对你心中所有未解的问题保持耐心，并试着去爱那些问题本身。
+243	Rainer Maria Rilke	The only journey is the journey within.	唯一的旅程，是内心的旅程。
+244	Rainer Maria Rilke	Once the realization is accepted that even between the closest human beings infinite distances continue, a wonderful living side by side can grow.	一旦接受这样的认识——即使是最亲近的人之间，也永远存在无限的距离——一种美妙的并肩而居便由此生长。
+245	Confucius	It does not matter how slowly you go as long as you do not stop.	走得再慢也无妨，只要你不停下脚步。
+246	Confucius	The man who moves a mountain begins by carrying away small stones.	移山者，始于搬运小石块。
+247	Confucius	Real knowledge is to know the extent of one's ignorance.	真正的知识，是知道自己无知的程度。
+248	Confucius	Life is really simple, but we insist on making it complicated.	生活其实很简单，但我们坚持把它复杂化。
+249	Confucius, The Analects	When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it — this is knowledge.	知之为知之，不知为不知，是知也。
+250	Walt Whitman	Keep your face always toward the sunshine, and shadows will fall behind you.	让你的脸始终朝向阳光，阴影便会落在你身后。
+251	Walt Whitman, Song of Myself	Do I contradict myself? Very well then I contradict myself; I am large, I contain multitudes.	我自相矛盾了吗？好吧，那就自相矛盾吧；我辽阔宏大，我包容万象。
+252	Walt Whitman, O Me! O Life!	The powerful play goes on, and you may contribute a verse.	宏大的演出继续进行，而你，也许能贡献一行诗句。
+253	Henry David Thoreau, Walden	Go confidently in the direction of your dreams. Live the life you have imagined.	满怀信心地朝梦想的方向前进，过上你所想象的生活。
+254	Henry David Thoreau, Walden	Not till we have lost the world do we begin to find ourselves.	直到我们失去了世界，我们才开始找到自己。
+255	Henry David Thoreau	It's not what you look at that matters, it's what you see.	重要的不是你看着什么，而是你看见了什么。
+256	Ralph Waldo Emerson	To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.	在一个不断试图将你变成他人的世界中保持自我，是最伟大的成就。
+257	Ralph Waldo Emerson	Do not go where the path may lead, go instead where there is no path and leave a trail.	不要走有路的地方，而要去没有路的地方，并留下一条小径。
+258	Ralph Waldo Emerson	The only way to have a friend is to be one.	拥有朋友的唯一方式，就是自己先成为一个朋友。
+</script></main><footer class=site-footer><span>&copy; 2026 Kevin Y. Lin</span></footer></body></html>

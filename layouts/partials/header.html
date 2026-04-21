@@ -1,0 +1,31 @@
+{{- $isZh := eq .Language.Lang "zh" -}}
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="{{ "" | relLangURL }}" aria-label="Kevin Y. Lin">Kevin Y. Lin</a>
+    <div class="site-header__right">
+      <nav class="site-nav" aria-label="{{ if $isZh }}主导航{{ else }}Main navigation{{ end }}">
+        {{- $currentPage := . -}}
+        {{- range site.Menus.main }}
+        {{- $target := .URL | relLangURL -}}
+        {{- $active := or (eq $target $currentPage.RelPermalink) (and (ne $target ("" | relLangURL)) (hasPrefix $currentPage.RelPermalink $target)) -}}
+        <a {{ if $active }}aria-current="page"{{ end }} href="{{ $target }}">{{ .Name }}</a>
+        {{- end }}
+        {{- range .Translations }}
+        <a class="site-nav__lang" href="{{ .RelPermalink }}" aria-label="{{ if eq .Language.Lang "zh" }}中文{{ else }}English{{ end }}">{{ upper .Language.Lang }}</a>
+        {{- end }}
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="{{ if $isZh }}主题：跟随系统{{ else }}Theme: system{{ end }}" title="{{ if $isZh }}主题：跟随系统{{ else }}Theme: system{{ end }}">
+        <svg class="theme-toggle__icon theme-toggle__icon--auto" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3.25A8.75 8.75 0 1 0 12 20.75 8.75 8.75 0 0 0 12 3.25Zm0 1.5v15a7.25 7.25 0 0 1 0-15Z" />
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5.75A6.25 6.25 0 1 0 12 18.25 6.25 6.25 0 0 0 12 5.75Zm0 1.5a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5ZM12 1.5a.75.75 0 0 1 .75.75v1.35a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.5Zm0 18.15a.75.75 0 0 1 .75.75v1.35a.75.75 0 0 1-1.5 0V20.4a.75.75 0 0 1 .75-.75ZM4.58 3.52a.75.75 0 0 1 1.06.02l.94.98a.75.75 0 1 1-1.08 1.04l-.94-.98a.75.75 0 0 1 .02-1.06Zm12.84 14.92a.75.75 0 0 1 1.08 0l.94.98a.75.75 0 1 1-1.08 1.04l-.94-.98a.75.75 0 0 1 0-1.04ZM1.5 12a.75.75 0 0 1 .75-.75H3.6a.75.75 0 0 1 0 1.5H2.25A.75.75 0 0 1 1.5 12Zm18.15 0a.75.75 0 0 1 .75-.75h1.35a.75.75 0 0 1 0 1.5H20.4a.75.75 0 0 1-.75-.75ZM5.5 18.44a.75.75 0 0 1 1.08 1.04l-.94.98a.75.75 0 0 1-1.08-1.04l.94-.98ZM18.36 3.54a.75.75 0 0 1 1.08 1.04l-.94.98a.75.75 0 1 1-1.08-1.04l.94-.98Z" />
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.1 15.53a.75.75 0 0 1 .86.98A9.25 9.25 0 1 1 7.49 3.04a.75.75 0 0 1 .98.86 7.75 7.75 0 0 0 11.63 11.63ZM6.8 5.08a7.75 7.75 0 1 0 12.12 12.12A9.25 9.25 0 0 1 6.8 5.08Z" />
+        </svg>
+        <span data-theme-toggle-label>{{ if $isZh }}跟随系统{{ else }}System{{ end }}</span>
+      </button>
+    </div>
+  </div>
+</header>

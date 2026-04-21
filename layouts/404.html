@@ -1,0 +1,16 @@
+{{- define "main" -}}
+{{- $isZh := eq .Language.Lang "zh" -}}
+<section class="page-shell page-shell--narrow error-page" aria-labelledby="page-title">
+  <header class="page-shell__header">
+    <p>404</p>
+    <h1 id="page-title">{{ if $isZh }}这里没有东西。{{ else }}Nothing here.{{ end }}</h1>
+    <div class="page-shell__description">
+      {{ if $isZh }}这个页面可能被删掉了，或者从来没有存在过。{{ else }}This page may have been removed, or it may never have existed.{{ end }}
+    </div>
+  </header>
+  <nav class="home-minimal__links" aria-label="{{ if $isZh }}返回入口{{ else }}Return links{{ end }}">
+    <a href="{{ "" | relLangURL }}">{{ if $isZh }}首页{{ else }}Home{{ end }}</a>
+    <a href="{{ "posts/" | relLangURL }}">{{ if $isZh }}文章{{ else }}Articles{{ end }}</a>
+  </nav>
+</section>
+{{- end -}}

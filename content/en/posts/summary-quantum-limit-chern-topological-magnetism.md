@@ -8,6 +8,7 @@ author = "Kevin Y. Lin"
 categories = ["Paper Summary", "Quantum Materials"]
 tags = ["Chern Magnetism", "Kagome Materials", "STM", "ARPES", "Topological Matter"]
 summary = "A structured reading note on quantum-limit Chern topological magnetism in TbMn6Sn6, focusing on Dirac fermions, Chern gaps, edge states, and Berry-curvature transport."
+translationKey = "quantum-limit-chern-topological-magnetism"
 +++
 
 **Author:** Kevin Y. Lin  

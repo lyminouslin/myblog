@@ -5,20 +5,18 @@ theme = "PaperMod"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "term", "RSS"]
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML"]
 
 [pagination]
-  pagerSize = 6
+  pagerSize = 8
 
 [minify]
   disableXML = true
   minifyOutput = true
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
 
 [module]
   [module.hugoVersion]
@@ -34,122 +32,64 @@ enableRobotsTXT = true
     title = "Kevin Y. Lin"
 
     [[languages.en.menu.main]]
-      name = "Posts"
-      url = "/en/posts/"
+      name = "Articles"
+      url = "posts/"
       weight = 1
 
     [[languages.en.menu.main]]
-      name = "Research"
-      url = "/en/research/"
+      name = "About me"
+      url = "about/"
       weight = 2
-
-    [[languages.en.menu.main]]
-      name = "Now"
-      url = "/en/now/"
-      weight = 3
-
-    [[languages.en.menu.main]]
-      name = "Archive"
-      url = "/en/archive/"
-      weight = 4
-
-    [[languages.en.menu.main]]
-      name = "Tags"
-      url = "/en/tags/"
-      weight = 5
-
-    [[languages.en.menu.main]]
-      name = "Search"
-      url = "/en/search/"
-      weight = 6
 
   [languages.zh]
     languageName = "中文"
     languageAltTitle = "中文"
     contentDir = "content/zh"
     weight = 2
-    title = "Kevin Y. Lin 的博客"
+    title = "Kevin Y. Lin"
 
     [[languages.zh.menu.main]]
       name = "文章"
-      url = "/zh/posts/"
+      url = "posts/"
       weight = 1
 
     [[languages.zh.menu.main]]
-      name = "研究"
-      url = "/zh/research/"
+      name = "关于我"
+      url = "about/"
       weight = 2
-
-    [[languages.zh.menu.main]]
-      name = "近况"
-      url = "/zh/now/"
-      weight = 3
-
-    [[languages.zh.menu.main]]
-      name = "归档"
-      url = "/zh/archive/"
-      weight = 4
-
-    [[languages.zh.menu.main]]
-      name = "标签"
-      url = "/zh/tags/"
-      weight = 5
-
-    [[languages.zh.menu.main]]
-      name = "搜索"
-      url = "/zh/search/"
-      weight = 6
 
 [params]
   title = "Kevin Y. Lin"
-  description = "Physics notes, quantum materials, topology, spectroscopy, and mathematical thinking."
-  keywords = ["condensed matter physics", "quantum materials", "topology", "STM", "ARPES", "Bayesian inference"]
+  description = "Articles, notes, and occasional self-aware drivel."
+  keywords = ["Kevin Y. Lin", "articles", "notes"]
   author = "Kevin Y. Lin"
   env = "production"
-  defaultTheme = "auto"
+  defaultTheme = "light"
   DateFormat = "Jan 2, 2006"
   mainSections = ["posts"]
-  ShowAllPagesInArchive = false
 
-  math = true
-  ShowReadingTime = true
+  math = false
+  ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  ShowToc = true
-  TocOpen = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
+  UseHugoToc = false
+  ShowToc = false
   comments = false
   hideFooter = false
-  disableThemeToggle = false
-  displayFullLangName = true
+  disableThemeToggle = true
+  disableScrollToTop = true
+  displayFullLangName = false
 
   [params.label]
     text = "Kevin Y. Lin"
 
   [params.assets]
-    favicon = "/images/kevin.jpg"
-    favicon16x16 = "/images/kevin.jpg"
-    favicon32x32 = "/images/kevin.jpg"
-    apple_touch_icon = "/images/kevin.jpg"
-    theme_color = "#f6f8f5"
-    msapplication_TileColor = "#f6f8f5"
-
-  [params.homeInfoParams]
-    title = "Kevin Y. Lin"
-    subtitle = "Undergraduate in Physics @ SUSTech, Class of 2028"
-    content = """
-I write about **topological condensed matter physics**, **quantum materials**, and the mathematical habits that make hard ideas become legible.
-
-My current academic focus is experimental condensed matter physics, especially electronic structures in quantum materials probed by **STM** and **ARPES**. I am interested in how symmetry, orbitals, lattice distortion, and topology cooperate at the atomic scale to produce phases that look impossible until the data makes them real.
-
-I am conducting research under the supervision of [Prof. Jiaxin Yin](https://www.sustech.edu.cn/en/faculties/yinjiaxin.html) at SUSTech, with a focus on novel quantum phases and topological materials.
-
-Outside my major, I also enjoy Bayesian inference, probabilistic modeling, and the foundations of statistical reasoning.
-"""
+    theme_color = "#f7f7f4"
+    msapplication_TileColor = "#f7f7f4"
 
   [[params.socialIcons]]
     name = "github"
@@ -160,24 +100,15 @@ Outside my major, I also enjoy Bayesian inference, probabilistic modeling, and t
     url = "https://x.com/crypto_lunaii"
 
   [[params.socialIcons]]
-    name = "mathstack"
+    name = "stackexchange"
     url = "https://math.stackexchange.com/users/1642272/kevin-lin"
-
-  [params.fuseOpts]
-    isCaseSensitive = false
-    shouldSort = true
-    location = 0
-    distance = 1000
-    threshold = 0.35
-    minMatchCharLength = 2
-    keys = ["title", "permalink", "summary", "content", "tags", "categories"]
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    noClasses = false
+    noClasses = true
     codeFences = true
     guessSyntax = true
     lineNos = false

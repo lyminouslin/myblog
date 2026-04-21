@@ -1,123 +1,55 @@
-{{- define "main" }}
+{{- define "main" -}}
+{{- $isZh := eq .Language.Lang "zh" -}}
+{{- $pages := .RegularPages -}}
+{{- if .IsHome -}}
+  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $pages = where $pages "Language.Lang" .Language.Lang -}}
+{{- end -}}
+{{- $pages = sort $pages "Date" "desc" -}}
+{{- $paginator := .Paginate $pages -}}
 
-{{- if (and site.Params.profileMode.enabled .IsHome) }}
-{{- partial "index_profile.html" . }}
-{{- else }}
-
-{{- if not .IsHome | and .Title }}
-<header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
-  <h1>
-    {{ .Title }}
-    {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
-    {{- with .OutputFormats.Get "rss" }}
-    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
+<section class="page-shell" aria-labelledby="page-title">
+  <header class="page-shell__header">
+    <p>{{ if $isZh }}写作{{ else }}Writing{{ end }}</p>
+    <h1 id="page-title">{{ .Title | default (cond $isZh "文章" "Articles") }}</h1>
+    {{- with .Description }}
+    <div class="page-shell__description">{{ . | markdownify }}</div>
     {{- end }}
-    {{- end }}
-  </h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description | markdownify }}
-  </div>
-  {{- end }}
-</header>
-{{- end }}
-
-{{- if .Content }}
-<div class="post-content">
-  {{- if not (.Param "disableAnchoredHeadings") }}
-  {{- partial "anchored_headings.html" .Content -}}
-  {{- else }}{{ .Content }}{{ end }}
-</div>
-{{- end }}
-
-{{- $pages := union .RegularPages .Sections }}
-
-{{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Language.Lang" .Language.Lang }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
-{{- end }}
-
-{{- $paginator := .Paginate $pages }}
-
-{{- $term := .Data.Term }}
-{{- range $index, $page := $paginator.Pages }}
-
-{{- $class := "post-entry" }}
-{{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
-{{- $class = "first-entry" }}
-{{- else if $term }}
-{{- $class = "post-entry tag-entry" }}
-{{- end }}
-
-<article class="{{ $class }}">
-  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-      {{- .Title }}
-      {{- if .Draft }}
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-      {{- end }}
-    </h2>
   </header>
-  {{- if .Params.categories }}
-  <div class="entry-taxonomies" aria-label="Categories">
-    {{- range first 3 .Params.categories }}
-    <span>{{ . }}</span>
+
+  {{- if gt (len $paginator.Pages) 0 }}
+  <div class="article-list">
+    {{- range $paginator.Pages }}
+    <article class="article-row">
+      <a href="{{ .RelPermalink }}">
+        <div class="article-row__meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+          <span>{{ .ReadingTime }} {{ if $isZh }}分钟{{ else }}min{{ end }}</span>
+        </div>
+        <div class="article-row__body">
+          <h2>{{ .Title }}</h2>
+          {{- with .Summary }}
+          <p>{{ . | plainify | htmlUnescape | truncate 150 }}</p>
+          {{- end }}
+        </div>
+        <span class="article-row__arrow" aria-hidden="true">→</span>
+      </a>
+    </article>
     {{- end }}
   </div>
+  {{- else }}
+  <p class="empty-state">{{ if $isZh }}文章正在整理。{{ else }}Articles are being prepared.{{ end }}</p>
   {{- end }}
-  {{- if (ne (.Param "hideSummary") true) }}
-  <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </div>
-  {{- end }}
-  {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
-  </footer>
-  {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-</article>
-{{- end }}
 
-{{- if gt $paginator.TotalPages 1 }}
-<footer class="page-footer">
-  <nav class="pagination">
+  {{- if gt $paginator.TotalPages 1 }}
+  <nav class="minimal-pagination" aria-label="{{ if $isZh }}分页{{ else }}Pagination{{ end }}">
     {{- if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
-      <span aria-hidden="true">&larr;</span>&nbsp;{{ i18n "prev_page" }}
-      {{- if (.Param "ShowPageNums") }}
-      &nbsp;{{ sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
-      {{- end }}
-    </a>
+    <a href="{{ $paginator.Prev.URL }}">{{ if $isZh }}上一页{{ else }}Previous{{ end }}</a>
     {{- end }}
     {{- if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL | absURL }}">
-      {{- i18n "next_page" }}
-      {{- if (.Param "ShowPageNums") }}
-      &nbsp;{{ add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
-      {{- end }}&nbsp;<span aria-hidden="true">&rarr;</span>
-    </a>
+    <a href="{{ $paginator.Next.URL }}">{{ if $isZh }}下一页{{ else }}Next{{ end }}</a>
     {{- end }}
   </nav>
-</footer>
-{{- end }}
-
-{{- end }}
-{{- end }}
+  {{- end }}
+</section>
+{{- end -}}

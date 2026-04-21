@@ -1,7 +1,4 @@
-@layer reset, base, layout, components, prose, utilities;
-
-@layer reset {
-  *,
+@layer reset,base,layout,components,prose,utilities;@layer reset{*,
   *::before,
   *::after {
     box-sizing: border-box;
@@ -28,10 +25,7 @@
   svg {
     display: block;
   }
-}
-
-@layer base {
-  @font-face {
+}@layer base{@font-face {
     font-family: "Libre Baskerville Local";
     font-style: normal;
     font-weight: 400 700;
@@ -199,10 +193,7 @@
       scroll-behavior: smooth;
     }
   }
-}
-
-@layer layout {
-  .site-body {
+}@layer layout{.site-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -304,10 +295,7 @@
     color: var(--tertiary);
     font-size: 0.8rem;
   }
-}
-
-@layer components {
-  .skip-link {
+}@layer components{.skip-link {
     position: fixed;
     top: 14px;
     left: 14px;
@@ -670,10 +658,7 @@
   .error-page .home-minimal__links {
     margin-top: 32px;
   }
-}
-
-@layer prose {
-  .article-content {
+}@layer prose{.article-content {
     padding-top: 36px;
     color: var(--content);
     font-size: clamp(1rem, 0.35vw + 0.94rem, 1.08rem);
@@ -788,10 +773,7 @@
     overflow-y: hidden;
     padding-block: 0.45rem;
   }
-}
-
-@layer utilities {
-  @supports (text-wrap: balance) {
+}@layer utilities{@supports (text-wrap: balance) {
     .home-minimal h1,
     .page-shell__header h1,
     .article-shell__header h1,
