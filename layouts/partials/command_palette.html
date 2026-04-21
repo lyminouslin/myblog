@@ -1,0 +1,42 @@
+{{- $lang := .Language.Lang -}}
+{{- $isZh := eq $lang "zh" -}}
+{{- $posts := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+{{- $posts = where $posts "Language.Lang" $lang -}}
+{{- $posts = sort $posts "Date" "desc" -}}
+
+<button class="site-command-button" type="button" data-command-open aria-label="{{ if $isZh }}打开命令面板{{ else }}Open command palette{{ end }}">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </svg>
+</button>
+
+<div class="command-shell" data-command-shell hidden>
+  <div class="command-backdrop" data-command-close></div>
+  <section class="command-palette" role="dialog" aria-modal="true" aria-label="{{ if $isZh }}命令面板{{ else }}Command palette{{ end }}">
+    <div class="command-palette__bar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <input type="search" data-command-input placeholder="{{ if $isZh }}跳转到页面或笔记...{{ else }}Jump to a page or note...{{ end }}" autocomplete="off">
+    </div>
+    <div class="command-list" data-command-list data-empty="{{ if $isZh }}没有匹配结果{{ else }}No matches{{ end }}">
+      <a class="command-item" href="{{ "" | relLangURL }}" data-command-keywords="home start index">
+        <span>{{ if $isZh }}首页{{ else }}Home{{ end }}</span>
+        <small>{{ if $isZh }}站点入口{{ else }}Site entry{{ end }}</small>
+      </a>
+      {{- range site.Menus.main }}
+      <a class="command-item" href="{{ .URL | relURL }}" data-command-keywords="{{ .Name | plainify }} navigation menu">
+        <span>{{ .Name }}</span>
+        <small>{{ if $isZh }}导航{{ else }}Navigation{{ end }}</small>
+      </a>
+      {{- end }}
+      {{- range first 8 $posts }}
+      <a class="command-item" href="{{ .RelPermalink }}" data-command-keywords="{{ delimit .Params.tags " " }} {{ delimit .Params.categories " " }} {{ .Summary | plainify }}">
+        <span>{{ .Title }}</span>
+        <small>{{ .Date.Format "2006-01-02" }}</small>
+      </a>
+      {{- end }}
+    </div>
+  </section>
+</div>

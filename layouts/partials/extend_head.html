@@ -1,31 +1,14 @@
 {{ if or .Params.math .Site.Params.math }}
-  <!-- KaTeX styles and scripts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
-    onload="renderMathInElement(document.body);"
-    data-auto-render="true"
-    data-delimiters='[
-      { "left": "$$", "right": "$$", "display": true },
-      { "left": "\\\\(", "right": "\\\\)", "display": false }
-    ]'>
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      throwOnError: false
+    });">
   </script>
 {{ end }}
-
-{{ define "main" }}
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/tags/" class="button" style="
-      font-size: 1.2rem;
-      padding: 0.5rem 1rem;
-      background-color: #eef;
-      border: 1px solid #ccd;
-      border-radius: 6px;
-      text-decoration: none;
-    ">
-      🏷️ Explore All Tags
-    </a>
-  </div>
-
-  {{ .Content }}
-{{ end }}
-

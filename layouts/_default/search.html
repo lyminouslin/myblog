@@ -1,0 +1,30 @@
+{{- define "main" }}
+
+<header class="page-header search-header">
+  <p class="page-kicker">{{ if eq .Language.Lang "zh" }}站内搜索{{ else }}Search System{{ end }}</p>
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+  {{- if not (.Param "hideMeta") }}
+  <div class="post-meta">
+    {{- partial "translation_list.html" . -}}
+  </div>
+  {{- end }}
+</header>
+
+<div id="searchbox" class="search-panel">
+  <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default "Search notes..." }}"
+    aria-label="search" type="search" autocomplete="off" maxlength="64">
+  <ul id="searchResults" aria-label="search results"></ul>
+</div>
+
+<nav class="search-shortcuts" aria-label="{{ if eq .Language.Lang "zh" }}快速入口{{ else }}Quick entry points{{ end }}">
+  <a href="{{ "research/" | relLangURL }}">{{ if eq .Language.Lang "zh" }}研究地图{{ else }}Research map{{ end }}</a>
+  <a href="{{ "archive/" | relLangURL }}">{{ if eq .Language.Lang "zh" }}归档{{ else }}Archive{{ end }}</a>
+  <a href="{{ "tags/" | relLangURL }}">{{ if eq .Language.Lang "zh" }}标签{{ else }}Tags{{ end }}</a>
+</nav>
+
+{{- end }}{{/* end main */}}

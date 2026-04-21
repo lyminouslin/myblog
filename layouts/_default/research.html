@@ -1,0 +1,132 @@
+{{- define "main" }}
+{{- $lang := .Language.Lang -}}
+{{- $isZh := eq $lang "zh" -}}
+{{- $data := site.Data.research -}}
+{{- $posts := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+{{- $posts = where $posts "Language.Lang" $lang -}}
+{{- $posts = sort $posts "Date" "desc" -}}
+
+<header class="page-header research-header">
+  {{- partial "breadcrumbs.html" . }}
+  <p class="page-kicker">{{ if $isZh }}研究工作台{{ else }}Research Workspace{{ end }}</p>
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="post-content research-intro">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+<section class="research-console" data-filter-scope>
+  <div class="research-console__head">
+    <span>{{ if $isZh }}过滤{{ else }}Filter{{ end }}</span>
+    <h2>{{ if $isZh }}按研究线索切换视角{{ else }}Switch the map by research lens{{ end }}</h2>
+  </div>
+  <div class="filter-row" role="list" aria-label="{{ if $isZh }}研究过滤器{{ else }}Research filters{{ end }}">
+    <button type="button" class="is-active" data-filter-value="all">{{ if $isZh }}全部{{ else }}All{{ end }}</button>
+    <button type="button" data-filter-value="materials">{{ if $isZh }}材料{{ else }}Materials{{ end }}</button>
+    <button type="button" data-filter-value="spectroscopy">{{ if $isZh }}谱学{{ else }}Spectroscopy{{ end }}</button>
+    <button type="button" data-filter-value="topology">{{ if $isZh }}拓扑{{ else }}Topology{{ end }}</button>
+    <button type="button" data-filter-value="math">{{ if $isZh }}数学{{ else }}Math{{ end }}</button>
+    <button type="button" data-filter-value="inference">{{ if $isZh }}推断{{ else }}Inference{{ end }}</button>
+  </div>
+
+  <div class="research-grid">
+    {{- range $data.domains }}
+    <article class="research-card" data-filterable data-groups="{{ .group }}">
+      <div class="research-card__meta">
+        <span>{{ partial "lang.html" (dict "value" .label "lang" $lang) }}</span>
+        <b>{{ partial "lang.html" (dict "value" .status "lang" $lang) }}</b>
+      </div>
+      <h2>{{ partial "lang.html" (dict "value" .title "lang" $lang) }}</h2>
+      <p>{{ partial "lang.html" (dict "value" .text "lang" $lang) }}</p>
+      <div class="lab-chip-row">
+        {{- range .methods }}
+        <em>{{ . }}</em>
+        {{- end }}
+      </div>
+    </article>
+    {{- end }}
+    {{- range $data.methods }}
+    <article class="research-card research-card--method" data-filterable data-groups="{{ .group }}">
+      <div class="research-card__meta">
+        <span>{{ partial "lang.html" (dict "value" .label "lang" $lang) }}</span>
+        <b>{{ if $isZh }}方法{{ else }}Method{{ end }}</b>
+      </div>
+      <h2>{{ partial "lang.html" (dict "value" .title "lang" $lang) }}</h2>
+      <p>{{ partial "lang.html" (dict "value" .text "lang" $lang) }}</p>
+    </article>
+    {{- end }}
+  </div>
+</section>
+
+<section class="evidence-board" aria-label="{{ if $isZh }}证据链面板{{ else }}Evidence board{{ end }}">
+  <div class="lab-section-head">
+    <span>{{ if $isZh }}证据链{{ else }}Evidence Chain{{ end }}</span>
+    <h2>{{ if $isZh }}把主题、方法和问题放在同一张桌面上，而不是分散在列表里。{{ else }}Themes, methods, and questions on one surface instead of scattered lists.{{ end }}</h2>
+  </div>
+  <div class="evidence-board__grid">
+    {{- range $index, $signal := $data.signals }}
+    <article style="--step: {{ add $index 1 }}">
+      <span>{{ $signal.number }}</span>
+      <h3>{{ partial "lang.html" (dict "value" $signal.title "lang" $lang) }}</h3>
+      <p>{{ partial "lang.html" (dict "value" $signal.text "lang" $lang) }}</p>
+    </article>
+    {{- end }}
+  </div>
+</section>
+
+<section class="question-board">
+  <div class="lab-section-head">
+    <span>{{ if $isZh }}核心问题{{ else }}Questions{{ end }}</span>
+    <h2>{{ if $isZh }}判断一条线索是否值得追下去，先看它回答什么问题。{{ else }}A thread becomes useful when it answers a sharper question.{{ end }}</h2>
+  </div>
+  <div class="question-board__list">
+    {{- range $data.questions }}
+    <article>
+      <span>{{ .domain }}</span>
+      <h3>{{ partial "lang.html" (dict "value" .title "lang" $lang) }}</h3>
+      <p>{{ partial "lang.html" (dict "value" .text "lang" $lang) }}</p>
+    </article>
+    {{- end }}
+  </div>
+</section>
+
+<section class="timeline-panel">
+  <div class="lab-section-head">
+    <span>{{ if $isZh }}构建记录{{ else }}Build Log{{ end }}</span>
+    <h2>{{ if $isZh }}这个网站本身也在记录研究系统的演化。{{ else }}The site itself records the evolution of the research system.{{ end }}</h2>
+  </div>
+  <div class="timeline-grid">
+    {{- range $data.timeline }}
+    <article>
+      <time>{{ .date }}</time>
+      <h3>{{ partial "lang.html" (dict "value" .title "lang" $lang) }}</h3>
+      <p>{{ partial "lang.html" (dict "value" .text "lang" $lang) }}</p>
+    </article>
+    {{- end }}
+  </div>
+</section>
+
+<section class="research-output">
+  <div class="lab-section-head">
+    <span>{{ if $isZh }}输出{{ else }}Output{{ end }}</span>
+    <h2>{{ if $isZh }}已经沉淀成文章的部分。{{ else }}Threads that have already become notes.{{ end }}</h2>
+  </div>
+  <div class="output-list">
+    {{- range first 6 $posts }}
+    <a href="{{ .Permalink }}">
+      <span>{{ .Date.Format "2006-01-02" }}</span>
+      <strong>{{ .Title }}</strong>
+      <small>{{ with .Params.categories }}{{ delimit . " / " }}{{ end }}</small>
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}

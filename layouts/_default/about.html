@@ -1,0 +1,50 @@
+{{- define "main" }}
+{{- $lang := .Language.Lang -}}
+{{- $isZh := eq $lang "zh" -}}
+{{- $data := site.Data.research -}}
+{{- $profile := $data.profile -}}
+
+<article class="about-page">
+  <header class="about-hero">
+    <div class="about-hero__image">
+      <img src="{{ $profile.image | absURL }}" alt="Kevin Y. Lin" width="420" height="420">
+    </div>
+    <div class="about-hero__copy">
+      {{- partial "breadcrumbs.html" . }}
+      <p class="page-kicker">{{ if $isZh }}关于{{ else }}About{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ partial "lang.html" (dict "value" $profile.role "lang" $lang) }}</p>
+      <p>{{ partial "lang.html" (dict "value" $profile.longStatement "lang" $lang) }}</p>
+      <div class="about-links">
+        {{- range site.Params.socialIcons }}
+        <a href="{{ .url }}" rel="me noopener" target="_blank">{{ .name }}</a>
+        {{- end }}
+      </div>
+    </div>
+  </header>
+
+  {{- if .Content }}
+  <div class="post-content about-content">
+    {{- partial "anchored_headings.html" .Content -}}
+  </div>
+  {{- end }}
+
+  <section class="about-grid" aria-label="{{ if $isZh }}写作原则{{ else }}Writing principles{{ end }}">
+    {{- range $data.current.principles }}
+    <article>
+      <span>{{ if $isZh }}原则{{ else }}Principle{{ end }}</span>
+      <p>{{ partial "lang.html" (dict "value" . "lang" $lang) }}</p>
+    </article>
+    {{- end }}
+  </section>
+
+  <section class="about-lab">
+    <div>
+      <span>{{ if $isZh }}科研训练{{ else }}Supervision{{ end }}</span>
+      <h2>{{ if $isZh }}在南科大开展凝聚态相关训练。{{ else }}Condensed-matter training at SUSTech.{{ end }}</h2>
+      <p>{{ if $isZh }}当前研究兴趣集中在新奇量子相、拓扑材料和能够连接谱学与输运的实验线索。{{ else }}Current interests center on novel quantum phases, topological materials, and experimental evidence that connects spectroscopy with transport.{{ end }}</p>
+    </div>
+    <a href="https://www.sustech.edu.cn/en/faculties/yinjiaxin.html" rel="noopener" target="_blank">{{ if $isZh }}导师页面{{ else }}Supervisor profile{{ end }}</a>
+  </section>
+</article>
+{{- end }}
