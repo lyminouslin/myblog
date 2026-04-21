@@ -9,23 +9,27 @@
 {{- $postsURL := "posts/" | relLangURL -}}
 {{- $researchURL := "research/" | relLangURL -}}
 {{- $nowURL := "now/" | relLangURL -}}
+{{- $quantum := index (where $data.domains "id" "quantum-materials") 0 -}}
+{{- $chern := index (where $data.domains "id" "chern-magnetism") 0 -}}
+{{- $manifolds := index (where $data.domains "id" "manifolds") 0 -}}
+{{- $probability := index (where $data.domains "id" "probability") 0 -}}
 
 <section class="home-hero-clean" aria-labelledby="home-title">
   <div class="home-hero-clean__copy">
-    <p class="home-kicker">{{ if $isZh }}凝聚态物理笔记{{ else }}Condensed matter physics notes{{ end }}</p>
+    <p class="home-kicker">{{ if $isZh }}量子材料 / 谱学 / 拓扑{{ else }}Quantum materials / spectroscopy / topology{{ end }}</p>
     <h1 id="home-title">Kevin Y. Lin</h1>
     <p class="home-subtitle">
       {{ if $isZh }}
-      关于量子材料、拓扑与推断的研究笔记。
+      我通过谱学、拓扑和电子结构研究量子材料。
       {{ else }}
-      Condensed matter physics notes on quantum materials, topology, and inference.
+      I study quantum materials through spectroscopy, topology, and electronic structure.
       {{ end }}
     </p>
     <p class="home-support">
       {{ if $isZh }}
-      关注 STM、ARPES、电子结构、Berry 曲率和数学建模之间的证据链。
+      用 STM、ARPES 与理论线索追踪结构如何转化为拓扑与可测量信号。
       {{ else }}
-      Working across STM, ARPES, electronic structure, Berry curvature, and mathematical modeling.
+      Using STM, ARPES, and theory to trace how structure becomes topology and measurement.
       {{ end }}
     </p>
     <div class="home-actions">
@@ -38,48 +42,61 @@
     <canvas data-research-visual width="760" height="560" aria-hidden="true"></canvas>
     <figcaption>
       <span>STM / ARPES</span>
-      <span>Band topology</span>
-      <span>Inference</span>
+      <span>Electronic structure</span>
+      <span>Chern response</span>
     </figcaption>
   </figure>
 </section>
 
 <section class="home-section" aria-labelledby="areas-title">
   <div class="home-section__head">
-    <span>{{ if $isZh }}Research Areas{{ else }}Research Areas{{ end }}</span>
-    <h2 id="areas-title">{{ if $isZh }}三个主线，少量但清楚。{{ else }}Three threads, kept legible.{{ end }}</h2>
+    <span>{{ if $isZh }}研究主线{{ else }}Research Focus{{ end }}</span>
+    <h2 id="areas-title">{{ if $isZh }}围绕量子材料与拓扑响应组织。{{ else }}Organized around quantum materials and topological response.{{ end }}</h2>
   </div>
-  <div class="area-grid">
-    {{- range $domain := $data.domains }}
-      {{- if in (slice "quantum-materials" "chern-magnetism" "probability") $domain.id }}
-      <article class="area-card">
-        <span>{{ partial "lang.html" (dict "value" $domain.label "lang" $lang) }}</span>
-        <h3>{{ partial "lang.html" (dict "value" $domain.title "lang" $lang) }}</h3>
-        <p>{{ partial "lang.html" (dict "value" $domain.text "lang" $lang) }}</p>
-        <div class="home-chip-row">
-          {{- range first 2 $domain.methods }}
-          <b>{{ . }}</b>
-          {{- end }}
-        </div>
-      </article>
-      {{- end }}
+  <div class="area-grid area-grid--focused">
+    {{- range slice $quantum $chern }}
+    <article class="area-card area-card--primary">
+      <span>{{ partial "lang.html" (dict "value" .label "lang" $lang) }}</span>
+      <h3>{{ partial "lang.html" (dict "value" .title "lang" $lang) }}</h3>
+      <p>{{ partial "lang.html" (dict "value" .text "lang" $lang) }}</p>
+      <div class="home-chip-row">
+        {{- range first 3 .methods }}
+        <b>{{ . }}</b>
+        {{- end }}
+      </div>
+    </article>
     {{- end }}
+    <aside class="area-side" aria-label="{{ if $isZh }}相邻线索{{ else }}Adjacent threads{{ end }}">
+      <article>
+        <span>{{ if $isZh }}数学笔记{{ else }}Mathematical notes{{ end }}</span>
+        <h3>{{ partial "lang.html" (dict "value" $manifolds.label "lang" $lang) }}</h3>
+        <p>{{ if $isZh }}用于整理定义、反例和推导，不抢主研究叙事。{{ else }}Definitions, counterexamples, and derivations that support the main physics thread.{{ end }}</p>
+      </article>
+      <article>
+        <span>{{ if $isZh }}相邻副线{{ else }}Adjacent inquiry{{ end }}</span>
+        <h3>{{ partial "lang.html" (dict "value" $probability.label "lang" $lang) }}</h3>
+        <p>{{ if $isZh }}作为模型比较和不确定性思维的副线保留。{{ else }}A side track for model comparison, uncertainty, and scientific reasoning.{{ end }}</p>
+      </article>
+    </aside>
   </div>
 </section>
 
 <section class="home-section" aria-labelledby="notes-title">
-  <div class="home-section__head">
-    <span>{{ if $isZh }}Selected Notes{{ else }}Selected Notes{{ end }}</span>
-    <h2 id="notes-title">{{ if $isZh }}从文章进入具体问题。{{ else }}Enter through concrete notes.{{ end }}</h2>
+  <div class="home-section__head home-section__head--with-link">
+    <div>
+      <span>{{ if $isZh }}近期写作{{ else }}Recent Writing{{ end }}</span>
+      <h2 id="notes-title">{{ if $isZh }}从具体笔记进入问题。{{ else }}Enter through concrete notes.{{ end }}</h2>
+    </div>
+    <a class="home-text-link" href="{{ $postsURL }}">{{ if $isZh }}浏览全部笔记{{ else }}Browse all notes{{ end }}</a>
   </div>
   {{- if gt (len $posts) 0 }}
-  <div class="selected-notes">
-    {{- range first 4 $posts }}
+  <div class="selected-notes selected-notes--compact">
+    {{- range first 2 $posts }}
     <article>
       <a href="{{ .Permalink }}">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         <h3>{{ .Title }}</h3>
-        <p>{{ .Summary | plainify | htmlUnescape | truncate 140 }}</p>
+        <p>{{ .Summary | plainify | htmlUnescape | truncate 132 }}</p>
       </a>
     </article>
     {{- end }}
@@ -93,23 +110,25 @@
 
 <section class="home-section home-methods" aria-labelledby="methods-title">
   <div class="home-section__head">
-    <span>{{ if $isZh }}Methods / Tools{{ else }}Methods / Tools{{ end }}</span>
-    <h2 id="methods-title">{{ if $isZh }}方法只作为阅读材料的入口。{{ else }}Methods as entry points into the material.{{ end }}</h2>
+    <span>{{ if $isZh }}方法{{ else }}Methods{{ end }}</span>
+    <h2 id="methods-title">{{ if $isZh }}方法服务主线，而不是另起一个叙事。{{ else }}Methods in service of the main thread.{{ end }}</h2>
   </div>
-  <div class="method-list">
-    {{- range $data.methods }}
+  <div class="method-list method-list--compact">
     <article>
-      <span>{{ partial "lang.html" (dict "value" .label "lang" $lang) }}</span>
-      <p>{{ partial "lang.html" (dict "value" .text "lang" $lang) }}</p>
+      <span>{{ if $isZh }}实验{{ else }}Experimental{{ end }}</span>
+      <p>STM / ARPES / Landau fan</p>
     </article>
-    {{- end }}
+    <article>
+      <span>{{ if $isZh }}分析{{ else }}Analytical{{ end }}</span>
+      <p>{{ if $isZh }}能带拓扑 / Berry 曲率 / 推导{{ else }}Band topology / Berry curvature / derivation{{ end }}</p>
+    </article>
   </div>
 </section>
 
 <section class="home-now">
   <div>
     <span>{{ if $isZh }}Now{{ else }}Now{{ end }}</span>
-    <p>{{ if $isZh }}当前关注：量子极限 Chern 磁性、谱学证据链、流形定义。{{ else }}Current focus: quantum-limit Chern magnetism, spectroscopic evidence chains, and manifold definitions.{{ end }}</p>
+    <p>{{ if $isZh }}最近在读量子极限 Chern 磁性，整理谱学证据链，并继续写流形定义相关笔记。{{ else }}Currently reading on quantum-limit Chern magnetism, refining evidence chains in spectroscopy, and writing notes on manifold definitions.{{ end }}</p>
   </div>
   <a href="{{ $nowURL }}">{{ if $isZh }}打开近况{{ else }}Open Now{{ end }}</a>
 </section>
